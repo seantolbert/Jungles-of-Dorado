@@ -1,0 +1,35 @@
+{% extends 'base.html' %} 
+{% load static wagtailimages_tags wagtailcore_tags %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+{% endblock %} 
+
+{% block content %}
+<main>
+  <div class="gallery-background"></div>
+  <div class="blog__header-container">
+    <h1 class="blog__header">{{page.title}}</h1>
+  </div>
+  <div class="blog__container">
+    <div class="blog__photo-container">
+      {% image page.main_image fill-800x400 as photo %}
+      <img class="blog__photo" src="{{photo.url}}" alt="{{photo.title}}" />
+    </div>
+    <div class="blog__content">
+      {% for block in page.body %} 
+        {% if block.block_type == 'image' %}
+          <div class="stream__photo-container">
+            {% image block.value fill-800x400 %}
+          </div>
+        {% elif block.block_type == 'heading' %}
+          <h1 class="stream__header">{{block.value}}</h1>
+        {% else %}
+          <section class="block-{{ block.block_type }}">{{ block.value }}</section>
+        {% endif %} 
+      {% endfor %}
+    </div>
+  </div>
+</main>
+
+{% endblock content %}
