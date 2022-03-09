@@ -94,11 +94,11 @@ WSGI_APPLICATION = 'blogoroddyv3.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':config('deag29s2jpfmgk'),
-        'USER':config('orzroanesfcrfz'),
-        'PASSWORD':config('9a23a854e918741e10f00bec2b3a62f4be958f4062ad041811714a9b91ebb504'),
-        'HOST':config('ec2-3-212-45-192.compute-1.amazonaws.com'),
-        'PORT':config('5432')
+        'NAME': 'deag29s2jpfmgk',
+        'USER': 'orzroanesfcrfz',
+        'PASSWORD': '9a23a854e918741e10f00bec2b3a62f4be958f4062ad041811714a9b91ebb504',
+        'HOST': 'ec2-3-212-45-192.compute-1.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
