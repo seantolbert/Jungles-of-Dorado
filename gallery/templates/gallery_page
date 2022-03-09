@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+{% load static wagtailcore_tags wagtailimages_tags %} 
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="gallery-background"></div>
+
+<main>
+  <div class="gallery-page__container">
+    {% image page.gallery_photo original as photo %}
+    <img src="{{ photo.url }}" alt="{{ photo.title }}">
+  </div>
+</main>
+{% endblock %}
