@@ -12,7 +12,7 @@
   <div class="card-container">
     {% for blog in page.blogs %}
     <div class="card">
-      {% image blog.specific.main_image fill-150x100 as photo %}
+      {% image blog.specific.main_image original as photo %}
       <img src="{{ photo.url }}" alt="{{ photo.title }}" class="card-img" />
       <div class="card-details">
         <h2 class="card-heading">{{blog.specific.title}}</h2>
