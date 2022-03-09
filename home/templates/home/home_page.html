@@ -1,0 +1,30 @@
+{% extends "base.html" %} 
+{% load static wagtailcore_tags wagtailimages_tags %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+{% endblock %} 
+
+{% block content %}
+<main class="home-page">
+  <div class="home-background"></div>
+  <h4 class="card-container__header">Latest Posts</h4>
+  <div class="card-container">
+    {% for blog in page.blogs %}
+    <div class="card">
+      {% image blog.specific.main_image fill-150x100 as photo %}
+      <img src="{{ photo.url }}" alt="{{ photo.title }}" class="card-img" />
+      <div class="card-details">
+        <h2 class="card-heading">{{blog.specific.title}}</h2>
+        <div class="card-buttons">
+          <h5 class="card-date">{{blog.specific.date}}</h5>
+          <a href="{% pageurl blog.specific %}" class="card-button">
+            Read
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</main>
+{% endblock content %}

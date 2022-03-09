@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@200;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  /* place-items: cente; */
+  min-height: 100vh;
+  font-family: sans-serif;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* NAVBAR */
+
+nav {
+  font-family: 'Merriweather', serif;
+  margin-bottom: 0;
+}
+
+.fonter {
+  color: #ffe074;;
+}
+
+.justonemore {
+  transition: background 0.4s ease, color 0.3s ease;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.justonemore:hover {
+  background: #ffe074;
+  color: black;
+}
