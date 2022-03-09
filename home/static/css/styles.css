@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather&family=Righteous&display=swap");
 
 
-/* * */
-
 .home-background,
 .about-background,
 .index-background,
@@ -375,8 +373,6 @@
   padding: 0.5vw;
   font-size: 0;
   display: -ms-flexbox;
-  -ms-flex-wrap: wrap;
-  -ms-flex-direction: column;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
   display: -webkit-box;
