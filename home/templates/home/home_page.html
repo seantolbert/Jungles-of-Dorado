@@ -1,9 +1,9 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 {% load static wagtailcore_tags wagtailimages_tags %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-{% endblock %} 
+{% endblock %}
 
 {% block content %}
 <main class="home-page">
@@ -12,17 +12,13 @@
   <div class="card-container">
     {% for blog in page.blogs %}
     <div class="card">
-      {% image blog.specific.main_image fill-150x100 as photo %}
-      <img src="{{ photo.url }}" alt="{{ photo.title }}" width="{{ photo.width }}" height="{{ photo.height }}" class="card-img" />
-      <div class="card-details">
-        <h2 class="card-heading">{{blog.specific.title}}</h2>
-        <div class="card-buttons">
-          <h5 class="card-date">{{blog.specific.date}}</h5>
-          <a href="{% pageurl blog.specific %}" class="card-button">
-            Read
-          </a>
-        </div>
-      </div>
+      {% image blog.specific.main_image fill-900x900 as photo %}
+      <img src="{{ photo.url }}" alt="{{ photo.title }}" class="card-img" />
+      <h2 class="card-heading">{{blog.specific.title}}</h2>
+      <span class="card-date">{{blog.specific.date}}</span>
+      <a href="{% pageurl blog.specific %}" class="card-button">
+        Read
+      </a>
     </div>
     {% endfor %}
   </div>

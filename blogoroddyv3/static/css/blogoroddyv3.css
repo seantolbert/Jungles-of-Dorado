@@ -8,7 +8,6 @@
 
 body {
   display: grid;
-  /* place-items: cente; */
   min-height: 100vh;
   font-family: sans-serif;
   color: black;
@@ -26,6 +25,12 @@ nav {
 
 .fonter {
   color: #ffe074;;
+}
+
+@media screen and (max-width: 375px) {
+  .fonter {
+    display: none;
+  }
 }
 
 .justonemore {
