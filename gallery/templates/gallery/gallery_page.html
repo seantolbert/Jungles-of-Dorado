@@ -10,8 +10,8 @@
 
 <main>
   <div class="gallery-page__container">
-    {% image page.gallery_photo original as photo %}
-    <img src="{{ photo.url }}" alt="{{ photo.title }}">
+    {% image page.gallery_photo fill-1000x800 as photo %}
+    <img src="{{ photo.url }}" alt="{{ photo.title }}" >
   </div>
 </main>
 {% endblock %}

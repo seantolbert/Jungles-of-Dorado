@@ -10,24 +10,8 @@
 {% block title %}Search{% endblock %} 
 
 {% block content %}
-<div class="search-background"></div>
 <main>
-<div class="separator">
-  <hr>
-</div>
-<div class="separator">
-  <hr>
-</div>
-<div class="separator">
-  <hr>
-</div>
-<div class="separator">
-  <hr>
-</div>
-<div class="separator">
-  <hr>
-</div>
-
+  <div class="search-background"></div>
   <div class="search__container">
     <form action="{% url 'search' %}" method="get" class="search__form">
       <input
@@ -38,7 +22,7 @@
         value="{{ search_query }}"
         {% endif %}
       />
-      <input type="submit" value="Search" class="search__button" />
+      <input type="submit" value="Go" class="search__button" />
     </form>
     {% if search_results %}
     <ul class="search__results">

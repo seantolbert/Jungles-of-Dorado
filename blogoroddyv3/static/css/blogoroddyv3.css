@@ -8,7 +8,6 @@
 
 body {
   display: grid;
-  min-height: 100vh;
   font-family: sans-serif;
   color: black;
   margin: 0;

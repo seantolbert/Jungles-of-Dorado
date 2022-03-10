@@ -1,31 +1,20 @@
-{% extends 'base.html' %} 
-{% load static wagtailimages_tags wagtailcore_tags %}
-
+{% extends 'base.html' %} {% load static wagtailimages_tags wagtailcore_tags %}
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-{% endblock %} 
-
-{% block content %}
+{% endblock %} {% block content %}
 <main>
   <div class="gallery-background"></div>
-  <div class="separator">
-    <hr>
-  </div>
-    <section class="gallery-section">
-    {% for post in page.posts %}
-    <div class="gallery-photo__container">
-      <a href="{% pageurl post.specific %}" class="gallery-photo__link">
-        {% image post.specific.gallery_photo fill-400x300 format-jpeg as photo %}
-        <img
-        class="gallery-photo"
-        src="{{photo.url}}"
-        alt="{{photo.title}}"
-        width="{{photo.width}}"
-        height="{{photo.height}}"
-        />
-      </a>
+  <section class="gallery-container">
+    <div class="gallery-items">
+      {% for post in page.posts %}
+      <div class="gallery-item">
+        <a href="{% pageurl post.specific %}" class="content">
+          {% image post.specific.gallery_photo fill-300x300 as photo %}
+          <img class="gallery-photo" src="{{photo.url}}" alt="{{ photo.title }}">
+        </a>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </section>
 </main>
 
