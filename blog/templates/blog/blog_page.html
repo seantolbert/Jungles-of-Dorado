@@ -13,14 +13,14 @@
   </div>
   <div class="blog__container">
     <div class="blog__photo-container">
-      {% image page.main_image fill-800x400 as photo %}
-      <img class="blog__photo" src="{{photo.url}}" alt="{{photo.title}}" />
+      {% image page.main_image max-800x400 as photo %}
+      <img class="blog__photo" src="{{photo.url}}" alt="{{photo.title}}"/>
     </div>
     <div class="blog__content">
       {% for block in page.body %} 
         {% if block.block_type == 'image' %}
           <div class="stream__photo-container">
-            {% image block.value fill-800x400 %}
+            {% image block.value max-700x400 %}
           </div>
         {% elif block.block_type == 'heading' %}
           <h1 class="stream__header">{{block.value}}</h1>
