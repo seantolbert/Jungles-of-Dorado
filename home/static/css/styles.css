@@ -22,7 +22,6 @@
   text-align: center;
   color: #ffe074;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 
 /* HOME PAGE */
@@ -149,7 +148,7 @@
 
 .about-container {
   margin: 18% auto;
-  width: 60%;
+  width: 70%;
   background: rgb(205, 205, 205);
   box-shadow: 10px 10px 18px 0 rgba(0, 0, 0, 0.3),
     inset -10px -10px 18px 0 rgba(0, 0, 0, 0.3);
@@ -177,6 +176,17 @@
   text-align: center;
   margin: 2%;
   color: rgb(122, 120, 120);
+}
+
+@media screen and (max-width: 650px) {
+  .about-container {
+    width: 80%;
+  }
+
+  .about-email {
+    font-size: 0.9rem;
+  }
+  
 }
 
 /* BLOG INDEX PAGE */
