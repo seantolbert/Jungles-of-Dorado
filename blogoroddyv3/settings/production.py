@@ -7,6 +7,7 @@ PREPEND_WWW = True
 SESSION_COOKIE_SECURE = True
 DEBUG = True
 SECRET_KEY = config('DJANGO_SECRET_KEY')
+ALLOWED_HOSTS = ['www.junglesofdorado.com']
 
 try:
     from .local import *
