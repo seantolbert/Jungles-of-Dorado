@@ -6,6 +6,7 @@ SECURE_SSL_REDIRECT = True
 PREPEND_WWW = True
 SESSION_COOKIE_SECURE = True
 DEBUG = False
+SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 try:
     from .local import *
