@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from decouple import config
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
@@ -94,11 +95,11 @@ WSGI_APPLICATION = 'blogoroddyv3.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'deag29s2jpfmgk',
-        'USER': 'orzroanesfcrfz',
-        'PASSWORD': '9a23a854e918741e10f00bec2b3a62f4be958f4062ad041811714a9b91ebb504',
-        'HOST': 'ec2-3-212-45-192.compute-1.amazonaws.com',
+        'ENGINE': config('DB_ENGINE'),
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASS'),
+        'HOST': config('DB_HOST'),
         'PORT': '5432'
     }
 }
