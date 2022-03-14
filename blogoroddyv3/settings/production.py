@@ -12,6 +12,7 @@ ALLOWED_HOSTS = ['www.junglesofdorado.com']
 MEDIA_URL = "https://%s/" % '%s.s3.amazonaws.com' % config('AWS_STORAGE_BUCKET_NAME')
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
+
 try:
     from .local import *
 except ImportError:
