@@ -361,8 +361,9 @@
 
 .stream__photo-container {
   margin: 5% auto;
-  display: block;
+  display: row;
   width: 100%;
+  text-align: center;
 }
 
 .richtext-image.left {
@@ -376,7 +377,7 @@
 }
 
 .richtext-image.full-width {
-  width: 100%;
+  width: auto;
   height: auto;
   margin: 0 auto;
 }
