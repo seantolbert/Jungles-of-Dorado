@@ -355,6 +355,11 @@
   width: 100%;
 }
 
+.blog__content {
+  width: 100%;
+}
+
+
 .stream__header {
   margin: 5% 0;
 }
@@ -388,6 +393,13 @@
   width: 100%;
   font-size: 1.5rem;
   font-family: monospace;
+}
+
+@media screen and (max-width:500px) {
+  .block__content {
+    font-size: 1rem;
+    color: red;
+  }
 }
 
 /* GALLERY INDEX PAGE */
