@@ -10,7 +10,7 @@
 
 <main>
   <div class="gallery-page__container">
-    {% image page.gallery_photo fill-1000x800 as photo %}
+    {% image page.gallery_photo min-1000x800 as photo %}
     <img src="{{ photo.url }}" alt="{{ photo.title }}" >
   </div>
 </main>
