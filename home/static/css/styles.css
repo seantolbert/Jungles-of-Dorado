@@ -371,7 +371,6 @@
 .stream__photo-container img {
   margin: 0 auto;
   height: auto;
-  /* max-height: ; */
   width: auto;
 }
 
@@ -387,6 +386,11 @@
     font-size: 1rem;
     color: red;
   }
+
+  .stream__photo-container img {
+    width: 100%;
+  }
+
 }
 
 /* GALLERY INDEX PAGE */
