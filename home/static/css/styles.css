@@ -242,10 +242,6 @@
   margin: 0 auto;
 }
 
-.index__post:hover {
-  box-shadow: 0 40px 68px 0 #888181, inset 0 -4px 12px 0 #eae7e7;
-}
-
 .index__post-image {
   border-radius: 5px 0 0 5px;
 }
@@ -270,6 +266,7 @@
   text-align: right;
   padding: 5px 10px;
   color: white;
+  font-family: monospace;
 }
 
 .post-description {
