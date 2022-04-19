@@ -24,6 +24,11 @@
           </div>
         {% elif block.block_type == 'heading' %}
           <h1 class="stream__header">{{block.value}}</h1>
+        {% elif block.block_type == 'image_block' %}
+          <div class="stream__photoblock-container">
+            {% image block.value.image max-700x600 %}
+            <div class="stream__photo-caption">{{block.value.caption}}</div>
+          </div>
         {% else %}
           <section class="block-{{ block.block_type }}">{{ block.value }}</section>
         {% endif %} 

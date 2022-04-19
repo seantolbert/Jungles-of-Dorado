@@ -8,6 +8,14 @@ from wagtail.core.fields import StreamField
 from wagtail.core import blocks
 from wagtail.images.blocks import ImageChooserBlock
 
+# class ImageBlock(blocks.StructBlock):
+#     image = ImageChooserBlock()  
+#     caption = blocks.CharBlock(classname="stream__img-caption", required=False)
+
+#     class Meta:
+#         icon = "image/picture"
+#         admin_text = mark_safe("<b>Image Block</b>")
+#         label = "Image Block"
 
 class BlogPage(Page):
     date = models.DateField(default=timezone.now, blank=True, null=True)
@@ -22,6 +30,10 @@ class BlogPage(Page):
 
     body = StreamField(
         [
+            ('image_block', blocks.StructBlock([
+                ('image', ImageChooserBlock()),
+                ('caption', blocks.CharBlock())
+            ])),
             ("heading", blocks.CharBlock()),
             ("content", blocks.RichTextBlock()),
             ("image", ImageChooserBlock()),
