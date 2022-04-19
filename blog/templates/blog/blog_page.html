@@ -12,6 +12,11 @@
     <h1 class="blog__header">{{page.title}}</h1>
   </div>
   <div class="blog__container">
+    <div class="tags-container">
+      {% for tag in page.tags.all %}
+      <a href="{{ self.get_parent.url }}?tag={{ tag.slug }}">{{tag}}</a>
+      {% endfor %}
+    </div>
     <div class="blog__photo-container">
       {% image page.main_image max-800x400 as photo %}
       <img class="blog__photo" src="{{photo.url}}" alt="{{photo.title}}"/>
