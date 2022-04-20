@@ -32,7 +32,7 @@ class BlogPage(Page):
         "wagtailimages.Image", null=True, blank=True, on_delete=models.SET_NULL
     )
 
-    main_image_excerpt = models.CharField(max_length=300, blank=True, null=True)
+    main_image_excerpt = models.CharField(max_length=500, blank=True, null=True)
 
     tags = ClusterTaggableManager(through=BlogPageTag, blank=True)
 

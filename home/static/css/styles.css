@@ -345,11 +345,20 @@
 .blog__photo-container {
   margin: 2% auto;
   display: flex;
+  flex-direction: column;
 }
 
 .blog__photo {
   margin: 0 auto;
+  width: auto;
   width: 100%;
+  height: auto;
+}
+
+.blog-photo__excerpt {
+  color: grey;
+  text-align: right;
+  font-size: 0.8rem;
 }
 
 .blog__content {
@@ -384,7 +393,6 @@
   margin: 5% 0;
 }
 .stream__photoblock-container img {
-  /* align-content: center;  */
   margin: 0 auto;
   width: auto;
   height: auto;
