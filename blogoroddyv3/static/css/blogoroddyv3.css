@@ -9,21 +9,25 @@
 body {
   display: grid;
   font-family: sans-serif;
-  color: black;
   margin: 0;
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
 
 /* NAVBAR */
 
 nav {
   font-family: 'Merriweather', serif;
+  font-weight: 1rem;
   margin-bottom: 0;
 }
 
 .fonter {
-  color: #ffe074;;
+  color: #ffe074;
 }
 
 @media screen and (max-width: 375px) {
@@ -44,87 +48,135 @@ nav {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* navbar boilerplate */
-
-/* .navbar {
+/* 
+.navbar {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
   background-color: transparent;
-  padding: 15px;
+  padding: 10px;
+  font-family: 'Merriweather' ,serif;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: inherit;
-  color: white;
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 5px;
 }
 
-.logo {
-  margin-right: 50px;
+.logo-title {
+  font-family: "Merriweather", serif;
+  color: #ffe074;
+  font-weight: 1rem;
+  font-size: 1.2rem;
 }
 
-.list {
+.logo-image {
+  width: 20px;
+  height: auto;
+  margin: 1px 5px;
+}
+
+.navlist {
   list-style: none;
   display: flex;
   gap: 25px;
 }
 
-.list li {
-  color: white;
+.navlist li {
+  position: absolute;
+  left: 0;
+  padding-top: 8px;
 }
 
-#toggler, 
+.navindex {
+  margin-left: 260px;
+}
+.navabout {
+  margin-left: 360px;
+}
+.navgallery {
+  margin-left: 440px;
+}
+
+.navlist span {
+  border-radius: 10px;
+  padding: 8px;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.navlist span:hover {
+  background: #ffe074;
+  color: black;
+}
+
+#toggler,
 .navbar label {
   display: none;
   color: white;
 }
 
-@media screen and (max-width: 600px) {
+.nav__search-input {
+  border-radius: 5px;
+  border: none;
+  padding: 8px;
+}
+
+.nav__search-input:focus {
+  outline: none;
+}
+
+.nav__search-button {
+  font-size: 1rem;
+  font-family: 'Merriweather', serif;
+  border-radius: 10px;
+  background: none;
+  border: 2px #ffe074 solid;
+  color: #ffe074;
+  padding: 5px;
+  transition: background 0.3s ease;
+}
+
+.nav__search-button:hover {
+  background: #ffe074;
+  color: black;
+}
+
+@media screen and (max-width: 750px) {
   .menu {
     width: 100%;
     max-height: 0;
     overflow: hidden;
   }
-  .list {
+  
+  .navlist {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    align-items: flex-start;
   }
+  
+  .navlist li {
+    position: relative;
+    
+  }
+  .navabout,
+  .navindex,
+  .navgallery {
+    margin-left: 0;
+  }
+  
   .navbar label {
     display: inline-flex;
     align-items: center;
     cursor: pointer;
   }
 
-  #toggler:checked ~ .menu{
+  #toggler:checked ~ .menu {
     max-height: 100%;
   }
 } */
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* .navbar {
   display: flex;

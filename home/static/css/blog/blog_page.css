@@ -112,6 +112,12 @@
   .block-content p {
     padding-top: 20px;
   }
+
+  .block-content p::first-letter {
+    font-size: 3rem;
+    float: left;
+    margin-right: 10px;
+  }
   
   @media screen and (max-width:500px) {
     .block__content {

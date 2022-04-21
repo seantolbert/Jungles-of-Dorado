@@ -12,7 +12,7 @@
     <h3 class="index__header">All Posts</h3>
   </div>
   <div class="index__container">
-    {% for post in page.blogs %}
+    {% for post in blogs %}
     <a class="index__post-link" href="{% pageurl post.specific %}">
       <div class="index__post">
         {% image post.specific.main_image fill-200x200 as photo %}

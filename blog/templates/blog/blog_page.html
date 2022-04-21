@@ -14,7 +14,7 @@
   <div class="blog__container">
     <div class="tags-container">
       {% for tag in page.tags.all %}
-      <a href="{{ self.get_parent.url }}?tag={{ tag.slug }}">{{tag}}</a>
+      <a href="/search/?query={{ tag.slug }}">{{tag}}</a>
       {% endfor %}
     </div>
     <div class="blog__photo-container">

@@ -29,17 +29,32 @@
       </form>
     </div>
   </div>
-</nav> 
+</nav>  
 
-{% comment %} <nav class="navbar">
-  <a href="/" class="logo">JUNGLES OF DORADO</a>
+<!-- <nav class="navbar">
+  <div class="logo-container">
+    <a href="/"><img src="{% static 'images/sun_savage.png' %}" alt="The Sun Savage" class="logo-image"></a>
+    <span class="logo-title">JUNGLES OF DORADO</span>
+  </div>
   <input id="toggler" type="checkbox">
   <label for="toggler"><i class="fa-solid fa-burger"></i></label>
   <div class="menu">
-    <ul class="list">
-      <li><a href="">Home</a></li>
-      <li><a href="">All Posts</a></li>
-      <li><a href="">Gallery</a></li>
+    <ul class="navlist">
+      <li class="navindex"><a href="/blog/"><span>All Posts</span></a></li>
+      <li class="navabout"><a href="/about/"><span>About</span></a></li>
+      <li class="navgallery"><a href="/gallery/"><span>Gallery</span></a></li>
+      <form action="{% url 'search' %}" method="GET">
+        <input type="text" 
+          name="query" 
+          {% if search_query %} 
+          value="{{search_query}}" 
+          {% endif %} 
+          type="text" 
+          aria-label="Search"
+          class="nav__search-input"
+          >
+          <input type="submit" value="Search" class="nav__search-button">
+      </form>
     </ul>
   </div>
-</nav> {% endcomment %}
+</nav> -->
