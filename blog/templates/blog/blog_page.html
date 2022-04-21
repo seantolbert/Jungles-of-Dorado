@@ -20,7 +20,7 @@
     <div class="blog__photo-container">
       {% image page.main_image max-800x400 as photo %}
       <img class="blog__photo" src="{{photo.url}}" alt="{{photo.title}}"/>
-      <!-- <div class ="blog-photo__excerpt">{{ page.main_image_excerpt }}</div> -->
+      <div class ="blog-photo__excerpt">{{ page.main_image_excerpt }}</div>
     </div>
     <div class="blog__content">
       {% for block in page.body %} 
