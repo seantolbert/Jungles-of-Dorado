@@ -57,7 +57,7 @@ nav {
 
 /* navbar boilerplate */
 
-.navbar {
+/* .navbar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -68,7 +68,7 @@ nav {
 
 .navbar a {
   text-decoration: none;
-  /* color: inherit; */
+  color: inherit;
   color: white;
 }
 
@@ -112,7 +112,7 @@ nav {
   #toggler:checked ~ .menu{
     max-height: 100%;
   }
-}
+} */
 
 
 

@@ -2,12 +2,12 @@
 {% load static wagtailimages_tags wagtailcore_tags %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+<link rel="stylesheet" href="{% static 'css/blog/blog_page.css' %}" />
 {% endblock %} 
 
 {% block content %}
 <main>
-  <div class="gallery-background"></div>
+  <div class="blog_page-background"></div>
   <div class="blog__header-container">
     <h1 class="blog__header">{{page.title}}</h1>
   </div>
@@ -20,7 +20,7 @@
     <div class="blog__photo-container">
       {% image page.main_image max-800x400 as photo %}
       <img class="blog__photo" src="{{photo.url}}" alt="{{photo.title}}"/>
-      <div class ="blog-photo__excerpt">{{ page.main_image_excerpt }}</div>
+      <!-- <div class ="blog-photo__excerpt">{{ page.main_image_excerpt }}</div> -->
     </div>
     <div class="blog__content">
       {% for block in page.body %} 

@@ -424,6 +424,9 @@
   .stream__photo-container img {
     width: 100%;
   }
+  .stream__photoblock-container img {
+    width: 100%;
+  }
 }
 
 /* GALLERY INDEX PAGE */
