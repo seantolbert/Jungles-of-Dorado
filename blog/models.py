@@ -1,17 +1,18 @@
 from django.db import models
 from django.utils import timezone
 
-from wagtail.core.models import Page
-from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
-from wagtail.images.edit_handlers import ImageChooserPanel
-from wagtail.core.fields import StreamField
 from wagtail.core import blocks
+from wagtail.core.models import Page
+from wagtail.core.fields import StreamField
+from wagtail.search import index
 from wagtail.images.blocks import ImageChooserBlock
+from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
 
 from modelcluster.fields import ParentalKey
 from modelcluster.contrib.taggit import ClusterTaggableManager
-
 from taggit.models import TaggedItemBase
+
 
 class BlogPageTag(TaggedItemBase):
     content_object = ParentalKey(
@@ -57,6 +58,10 @@ class BlogPage(Page):
         ImageChooserPanel("main_image"),
         FieldPanel("main_image_excerpt"),
         StreamFieldPanel("body"),
+    ]
+
+    search_fields = Page.search_fields + [
+        index.SearchField('tags')
     ]
 
 
