@@ -19,7 +19,7 @@
     <ul class="search__results">
       {% for result in search_results %}
       <li>
-        <p class="search__result">
+        <div class="search__result">
           <a class="search__result-link" href="{% pageurl result %}">
             {% image result.specific.main_image fill-50x50 as photo %}
             <img
@@ -29,7 +29,9 @@
             width="{{ photo.width }}"
             height="{{photo.height}}"
             />
-            {{ result }} 
+            <div class="result-title">
+              {{ result }} 
+            </div>
             {% if result.tags %}
             <div class="tags">
               {% for tag in result.tags %}
@@ -43,7 +45,7 @@
               {{result.description}} 
             {% endif %}
           </a>
-        </p>
+        </div>
         {% if result.search_description %} {{ result.search_description }} {% endif %}
       </li>
       {% endfor %}
