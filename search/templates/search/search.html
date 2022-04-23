@@ -23,6 +23,7 @@
           <a class="search__result-link" href="{% pageurl result %}">
             {% image result.specific.main_image fill-50x50 as photo %}
             <img
+            class="result-image"
             src="{{ photo.url }}"
             alt="{{ photo.title }}"
             width="{{ photo.width }}"
