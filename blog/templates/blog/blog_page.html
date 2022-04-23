@@ -27,7 +27,6 @@
         {% if block.block_type == 'image' %}
           <div class="stream__photo-container">
             {% image block.value max-700x600 %}
-
           </div>
         {% elif block.block_type == 'heading' %}
           <h1 class="stream__header">{{block.value}}</h1>

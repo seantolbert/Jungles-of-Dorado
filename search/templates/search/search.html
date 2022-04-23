@@ -1,15 +1,6 @@
-{% extends "base.html" %} 
-{% load static wagtailcore_tags %} 
-
-{% block body_class %}template-searchresults{% endblock %} 
-
-{% block extra_css %}
+{% extends "base.html" %} {% load static wagtailcore_tags wagtailimages_tags %} {% block body_class %}template-searchresults{% endblock %} {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-{% endblock %} 
-
-{% block title %}Search{% endblock %} 
-
-{% block content %}
+{% endblock %} {% block title %}Search{% endblock %} {% block content %}
 <main>
   <div class="search-background"></div>
   <div class="search__container">
@@ -29,13 +20,30 @@
       {% for result in search_results %}
       <li>
         <p class="search__result">
-          <a class="search__result-link" href="{% pageurl result %}"
-            >{{ result }}</a
-          >
+          <a class="search__result-link" href="{% pageurl result %}">
+            {% image result.specific.main_image fill-150x150 as photo %}
+            <img
+            src="{{ photo.url }}"
+            alt="{{ photo.title }}"
+            width="{{ photo.width }}"
+            height="{{photo.height}}"
+            />
+            {{ result }} 
+            {% if result.tags %}
+            <div class="tags">
+              {% for tag in result.tags %}
+              <div class="tag">
+                {{tag}}
+              </div>
+              {% endfor %}
+            </div>  
+            {% endif %}
+            {% if result.description %}
+              {{result.description}} 
+            {% endif %}
+          </a>
         </p>
-        {% if result.search_description %} 
-            {{ result.search_description }} 
-        {% endif %}
+        {% if result.search_description %} {{ result.search_description }} {% endif %}
       </li>
       {% endfor %}
     </ul>
@@ -44,14 +52,12 @@
       href="{% url 'search' %}?query={{ search_query|urlencode }}&amp;page={{ search_results.previous_page_number }}"
       >Previous</a
     >
-    {% endif %} 
-    {% if search_results.has_next %}
+    {% endif %} {% if search_results.has_next %}
     <a
       href="{% url 'search' %}?query={{ search_query|urlencode }}&amp;page={{ search_results.next_page_number }}"
       >Next</a
     >
-    {% endif %} 
-    {% elif search_query %}
+    {% endif %} {% elif search_query %}
     <div class="search__results">
       <p class="search__no-result">No results found :(</p>
     </div>

@@ -18,7 +18,6 @@
   }
   
   .blog__header {
-    font-weight: bold;
     padding: 0;
     color: #ffe074;
     font-family: "Merriweather", serif;
@@ -48,9 +47,7 @@
   
   .blog__photo {
     margin: 0 auto;
-    /* width: auto; */
     width: 100%;
-    /* height: auto; */
   }
   
   .blog-photo__excerpt {
@@ -112,8 +109,8 @@
   .block-content p {
     padding-top: 20px;
   }
-
-  .block-content p::first-letter {
+  
+  .block-content p:nth-child(1):first-letter {
     font-size: 3rem;
     float: left;
     margin-right: 10px;
@@ -130,7 +127,7 @@
     }
 
     .stream__photoblock-container img {
-        width: 100%;
+      width: 100%;
     }
 
   }

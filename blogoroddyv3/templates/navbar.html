@@ -1,6 +1,6 @@
 {% load static wagtailimages_tags %}
 
-<nav class="navbar navbar-expand-lg navbar-light position-relative bg-opacity-0 w-100">
+<!-- <nav class="navbar navbar-expand-lg navbar-light position-relative bg-opacity-0 w-100">
   <div class="container-fluid">
     <a class="navbar-brand fixbar" href="/">
       <img src="{% static 'images/sun_savage.png' %}" alt="The Savage Sun" width="24" height="23" class="d-inline-block align-text-top mt-1 img-fluid">
@@ -29,32 +29,35 @@
       </form>
     </div>
   </div>
-</nav>  
+</nav>   -->
 
-<!-- <nav class="navbar">
+<nav class="custom-navbar">
   <div class="logo-container">
     <a href="/"><img src="{% static 'images/sun_savage.png' %}" alt="The Sun Savage" class="logo-image"></a>
     <span class="logo-title">JUNGLES OF DORADO</span>
   </div>
   <input id="toggler" type="checkbox">
-  <label for="toggler"><i class="fa-solid fa-burger"></i></label>
-  <div class="menu">
-    <ul class="navlist">
-      <li class="navindex"><a href="/blog/"><span>All Posts</span></a></li>
-      <li class="navabout"><a href="/about/"><span>About</span></a></li>
-      <li class="navgallery"><a href="/gallery/"><span>Gallery</span></a></li>
+  <label for="toggler"><i class="fa-solid fa-bars"></i></label>
+  <div class="menu-container">
+    <div class="navlist">
+      <div><a href="/"><span class="{% if request.path == '/' %}selected{% endif %}">Home</span></a></div>
+      <div><a href="/blog/"><span class="{% if request.path == '/blog/' %}selected{% endif %}">All Posts</span></a></div>
+      <div><a href="/about/"><span class="{% if request.path == '/about/' %}selected{% endif %}">About</span></a></div>
+      <div><a href="/gallery/"><span class="{% if request.path == '/gallery/' %}selected{% endif %}">Gallery</span></a></div>
+    </div>
+    <div class="form">
       <form action="{% url 'search' %}" method="GET">
         <input type="text" 
-          name="query" 
-          {% if search_query %} 
-          value="{{search_query}}" 
-          {% endif %} 
-          type="text" 
-          aria-label="Search"
-          class="nav__search-input"
-          >
-          <input type="submit" value="Search" class="nav__search-button">
+        name="query" 
+        {% if search_query %} 
+        value="{{search_query}}" 
+        {% endif %} 
+        type="text" 
+        aria-label="Search"
+        class="nav__search-input"
+        >
+        <input type="submit" value="Search" class="nav__search-button">
       </form>
-    </ul>
+    </div>
   </div>
-</nav> -->
+  </nav>
