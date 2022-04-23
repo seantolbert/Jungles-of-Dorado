@@ -582,6 +582,12 @@
   border-radius: 10px;
 }
 
+.result-title{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .search__no-result {
   color: white;
 }
