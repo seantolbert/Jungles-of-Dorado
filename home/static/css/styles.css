@@ -578,7 +578,7 @@
   flex-wrap: nowrap;
 }
 
-.result-image {
+/* .result-image {
   margin-right: 20px;
   border-radius: 10px;
 }
@@ -587,7 +587,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
+} */
 
 .search__no-result {
   color: white;
