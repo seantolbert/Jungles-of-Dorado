@@ -1,0 +1,53 @@
+/* Tolbert Logo */
+.tolbert {
+    text-align: center;
+    color: #ffe074;
+    font-weight: bold;
+  }
+  
+  .about-background {
+    background-image: url(../../images/about.jpeg);
+  }
+  
+  .about-container {
+    margin: 18% auto;
+    width: 70%;
+    background: rgb(205, 205, 205);
+    box-shadow: 10px 10px 18px 0 rgba(0, 0, 0, 0.3),
+      inset -10px -10px 18px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 20px 30px;
+    font-family: "Merriweather", serif;
+  }
+  
+  .about-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2%;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .about-description {
+    font-size: 1.2rem;
+    color: black;
+    text-align: center;
+  }
+  
+  .about-email {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 2%;
+    color: rgb(122, 120, 120);
+  }
+  
+  @media screen and (max-width: 650px) {
+    .about-container {
+      width: 80%;
+    }
+  
+    .about-email {
+      font-size: 0.9rem;
+    }
+  }
+  

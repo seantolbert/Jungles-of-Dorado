@@ -2,7 +2,7 @@
 {% load static wagtailcore_tags wagtailimages_tags %} 
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'css/gallery/gallery_page.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -12,6 +12,7 @@
   <div class="gallery-page__container">
     {% image page.gallery_photo min-1000x800 as photo %}
     <img src="{{ photo.url }}" alt="{{ photo.title }}" >
+    <div class="tester"></div>
   </div>
 </main>
 {% endblock %}

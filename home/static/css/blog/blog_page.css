@@ -10,9 +10,9 @@
     background-size: cover;
     background-position: center;
     z-index: -1;
-}
-
-.blog__header-container {
+  }
+  
+  .blog__header-container {
     text-align: center;
     margin: 5% auto;
   }
@@ -36,8 +36,6 @@
     padding: 2% 3%;
     overflow: hidden;
   }
-  
-  
   
   .blog__photo-container {
     margin: 2% auto;
@@ -116,7 +114,7 @@
     margin-right: 10px;
   }
   
-  @media screen and (max-width:500px) {
+  @media screen and (max-width: 500px) {
     .block__content {
       font-size: 1rem;
       color: red;
@@ -125,9 +123,9 @@
     .stream__photo-container img {
       width: 100%;
     }
-
+  
     .stream__photoblock-container img {
       width: 100%;
     }
-
   }
+  

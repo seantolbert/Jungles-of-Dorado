@@ -1,0 +1,131 @@
+.search-background {
+    background-image: url(../../images/searchpage.png);
+    filter: brightness(70%);
+  }
+  
+  .search__container {
+    margin: 10%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 3px;
+  }
+  
+  .search__form {
+    width: 100%;
+    display: flex;
+  }
+  
+  .search__input {
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px white solid;
+    -webkit-transition: box-shadow 0.4s ease;
+    -moz-transition: box-shadow 0.4s ease;
+    -o-transition: box-shadow 0.4s ease;
+    -ms-transition: box-shadow 0.4s ease;
+    transition: box-shadow 0.4s ease;
+    margin: 0 auto;
+  }
+  
+  .search__input:focus {
+    -webkit-box-shadow: 0px 0px 83px 18px rgba(255, 225, 116, 0.45);
+    -moz-box-shadow: 0px 0px 83px 18px rgba(255, 225, 116, 0.45);
+    box-shadow: 0px 0px 83px 18px rgba(255, 225, 116, 0.45);
+  }
+  
+  .search__button {
+    width: 15%;
+    border: none;
+    margin: 0 0 0 10px;
+    padding: 5px;
+    border-radius: 5px;
+    align-items: right;
+    color: white;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    -moz-backdrop-filter: blur(4px);
+    -o-backdrop-filter: blur(4px);
+    -ms-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    -webkit-transition: background 0.3s ease;
+    -moz-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
+    -ms-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+  }
+  
+  .search__button:hover {
+    background: rgba(175, 175, 175, 0.25);
+  }
+  
+  .search__results {
+    padding: 3% 0;
+    margin: 5% 0;
+    list-style: none;
+    border: 3px white solid;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    -moz-backdrop-filter: blur(4px);
+    -o-backdrop-filter: blur(4px);
+    -ms-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  
+  .search__no-result,
+  .search__result {
+    margin: 2% 3%;
+    background: rgba(71, 71, 71, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    -webkit-backdrop-filter: blur(4px);
+    -moz-backdrop-filter: blur(4px);
+    -o-backdrop-filter: blur(4px);
+    -ms-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  
+  /* .result-image {
+    margin-right: 20px;
+    border-radius: 10px;
+  }
+  
+  .result-title{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  } */
+  
+  .search__no-result {
+    color: white;
+  }
+  
+  .search__result-link {
+    text-decoration: none;
+    color: white;
+    margin: 2% auto;
+    padding: 10px;
+    font-family: "Merriweather", serif;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
+  .search__result:hover {
+    background: rgba(255, 255, 255, 0.67);
+    color: black;
+  }

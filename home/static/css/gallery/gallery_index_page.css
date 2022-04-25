@@ -1,0 +1,33 @@
+.gallery-background {
+    background: #eae7d3;
+    filter: brightness(80%);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+  
+  .gallery-container {
+    margin: 0 3%;
+  }
+  
+  .gallery-items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1% auto;
+  }
+  
+  .gallery-item {
+    margin: 20px auto;
+  }
+  
+  .gallery-photo {
+    box-shadow: 12px 12px 5px rgba(0, 0, 0, 0.4);
+  }
+  

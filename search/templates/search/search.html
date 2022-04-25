@@ -1,6 +1,14 @@
-{% extends "base.html" %} {% load static wagtailcore_tags wagtailimages_tags %} {% block body_class %}template-searchresults{% endblock %} {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-{% endblock %} {% block title %}Search{% endblock %} {% block content %}
+{% extends "base.html" %} 
+{% load static wagtailcore_tags wagtailimages_tags %} 
+{% block body_class %}template-searchresults{% endblock %} 
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/search/search.css' %}" />
+{% endblock %} 
+
+{% block title %}Search{% endblock %} 
+
+{% block content %}
 <main>
   <div class="search-background"></div>
   <div class="search__container">

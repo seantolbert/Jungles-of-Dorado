@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@200;600&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -19,37 +18,28 @@ a {
   color: black;
 }
 
-/* NAVBAR */
+/* background */
 
-/* nav {
-  font-family: 'Merriweather', serif;
-  font-weight: 1rem !important;
-  margin-bottom: 0;
-}
-
-.fonter {
-  color: #ffe074;
-}
-
-@media screen and (max-width: 375px) {
-  .fonter {
-    display: none;
-  }
-}
-
-.justonemore {
-  transition: background 0.4s ease, color 0.3s ease;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.justonemore:hover {
-  background: #ffe074;
-  color: black;
+.home-background,
+.about-background,
+.index-background,
+.search-background {
+  filter: brightness(80%);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  zoom: -20;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  background-position: center;
 }
 
 
-/* navbar boilerplate */
+
+/* navbar*/
 
 .custom-navbar {
   font-family: 'Merriweather', serif;
@@ -214,7 +204,6 @@ a {
   }
 
   #toggler:checked ~ .menu-container{
-    /* max-height: 100%; */
     transform: scaleY(1);
   }
 }
