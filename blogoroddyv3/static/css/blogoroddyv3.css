@@ -110,7 +110,7 @@ a {
 }
 
 .navlist span:not(.selected):hover {
-  background: white;
+  background: #ffe074;
   color: black;
 }
 
