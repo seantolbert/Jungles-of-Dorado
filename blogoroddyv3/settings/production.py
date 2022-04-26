@@ -12,6 +12,17 @@ ALLOWED_HOSTS = ['www.junglesofdorado.com']
 MEDIA_URL = "https://%s/" % '%s.s3.amazonaws.com' % config('AWS_STORAGE_BUCKET_NAME')
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASS'),
+        'HOST': config('DB_HOST'),
+        'PORT': '5432'
+    }
+}
+
 
 try:
     from .local import *

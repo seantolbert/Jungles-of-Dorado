@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block content %}
-<main class="home-page">
+ <!-- <main class="home-page">
   <div class="home-background"></div>
   <div class="card-container">
     {% for blog in page.blogs %}
@@ -21,5 +21,29 @@
     </div>
     {% endfor %}
   </div>
+</main>  -->
+
+<main>
+  <div class="home-background"></div>
+  <div class="cards">
+    {% for blog in page.blogs %}
+    <div class="card">
+      {% image blog.specific.main_image fill-900x900 as photo %}
+      <img src="{{ photo.url }}" alt="{{ photo.title }}" class="card-img" />
+      <h2 class="card-heading">{{blog.specific.title}}</h2><br>
+      <div class="row">
+        <a href="{% pageurl blog.specific %}" class="card-button">
+          Read
+        </a>
+        <span class="card-date">{{blog.specific.date}}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 </main>
+
+
+
+
+
 {% endblock content %}
