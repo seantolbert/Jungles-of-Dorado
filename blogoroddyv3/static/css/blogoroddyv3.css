@@ -109,10 +109,10 @@ a {
   border-radius: 5px;
   background: rgba( 0, 0, 0, 0.37 );
   border: none;
-  padding: 5px;
+  padding: 5px 25px 5px 5px;
   color: white;
   font-size: 1.2rem;
-  width: 100%;
+  width: 150px;;
 }
 
 .nav__search-input:focus {
