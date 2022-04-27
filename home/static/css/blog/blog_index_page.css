@@ -135,7 +135,7 @@
 .chip {
   height: 200px;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 10px 10px 20px 10px;
   overflow: hidden;
 }
 
@@ -192,4 +192,14 @@
   background-color: #ffe074;
   padding: 5px;
   font-size: 1.2rem;
+}
+
+.tag:last-child {
+  border-radius: 0 0 20px 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .chip {
+    width: 30%;
+  }
 }
