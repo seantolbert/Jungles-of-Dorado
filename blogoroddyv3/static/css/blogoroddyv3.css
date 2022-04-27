@@ -220,6 +220,10 @@ a {
     cursor: pointer;
   }
 
+  .nav__search-input {
+    width: 100%;
+  }
+
   .search-icon {
     right: unset;
     top: unset;
