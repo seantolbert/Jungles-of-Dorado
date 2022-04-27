@@ -8,20 +8,23 @@
 {% block content %}
 <div class="index-background"></div>
 <main>
-  {% comment %} <div class="index__header-container">
-    <h3 class="index__header">All Posts</h3>
-  </div> {% endcomment %}
   <div class="chip-list">
     {% for post in blogs %}
     {% image post.specific.main_image min-600x400 as photo %}
     <div class="chip" style="background: url({{photo.url}}) no-repeat 50% 50% ;">
       <a class="chip-link" href="{% pageurl post.specific %}">
         <div class="chip-container">
-
           <div class="chip-heading">{{ post.specific.title }}</div>
-          <div class="chip-date">{{ post.specific.date }}</div>
-          {% if post.specific.tags %}
+          <!-- <div class="chip-date">{{ post.specific.date }}</div> -->
+          {% if post.specific.description %}
           <p class="chip-description">{{ post.specific.description }}</p>
+          {% endif %}
+          {% if post.specific.description %}
+          <div class="chip-tags">
+            {% for tag in post.specific.tags.all %}
+            <div class="tag">{{tag}}</div>
+            {% endfor %}
+          </div>
           {% endif %}
         </div>
       </a>
