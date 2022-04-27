@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@200;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -56,7 +57,7 @@ a {
 .logo-image {
   width: 18px;
   height: auto;
-  padding-bottom: 5px;
+  margin-top: 8px;
 }
 
 .logo-title {
@@ -106,42 +107,54 @@ a {
   border-radius: 5px;
   background: rgba( 0, 0, 0, 0.37 );
   border: none;
-  padding: 8px;
+  padding: 5px;
   color: white;
+  font-size: 1.2rem;
+  width: 100%;
 }
 
 .nav__search-input:focus {
-  border: 1px #ffe074 solid;
+  outline: #ffe074;
 }
 
-.nav__search-button {
-  background: none;
-  border: 2px #ffe074 solid;
+.search-icon {
+  position: absolute;
   padding: 5px;
-  color: #ffe074;
-  border-radius: 10px;
-  margin-left: 5px;
-  transition: background 0.4s ease;
-}
-
-.nav__search-button:hover {
-  background: #ffe074;
-  color: black;
+  color: white;
+  top: 2px;
+  right: 0;
 }
 
 .custom-navbar label {
   color: white;
   font-size: 1.2rem;
-  padding: 5px;
+  padding: 5px 7px;
   border-radius: 5px;
   transition: background 0.4s ease;
 }
 
-.custom-navbar label:hover {
+.nav__search-button:active {
   background: #ffe074;
   color: black;
 }
 
+.custom-navbar label:active {
+  background: #ffe074;
+  color: black;
+}
+
+@media (hover:hover) {
+  .nav__search-button:hover {
+    background: #ffe074;
+    color: black;
+  }
+  
+  .custom-navbar label:hover {
+    background: #ffe074;
+    color: black;
+  }
+}
+  
 #toggler, 
 .custom-navbar label {
   display: none;
@@ -167,7 +180,6 @@ a {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     padding: 10px;
     position: absolute;
     right: 0;
@@ -180,6 +192,8 @@ a {
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     z-index: 1000;
+    align-items: flex-end;
+    width: min-content;
   }
 
   .navlist {
@@ -193,14 +207,20 @@ a {
 
   .form {
     display: flex;
-    justify-content: flex-end;
+    justify-content: end;
     order: 1;
+    width: 120px;
   }
 
   .custom-navbar label {
     display: inline-flex;
     align-items: center;
     cursor: pointer;
+  }
+
+  .search-icon {
+    right: unset;
+    top: unset;
   }
 
   #toggler:checked ~ .menu-container{
