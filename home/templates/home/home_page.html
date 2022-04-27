@@ -10,7 +10,7 @@
   <div class="home-background"></div>
   <div class="cards">
     {% for blog in page.blogs %} 
-    {% image blog.specific.main_image fill-545x370 as photo %}
+    {% image blog.specific.main_image min-545x370 as photo %}
     <div class="card" style="background: url({{photo.url}}) no-repeat 50% 50%;">
       <a href="{% pageurl blog.specific %}">
         <div class="card-container">
