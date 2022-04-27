@@ -13,16 +13,19 @@
   </div> {% endcomment %}
   <div class="chip-list">
     {% for post in blogs %}
-    {% image post.specific.main_image fill-300x300 as photo %}
-    <div class="chip" style="background: url({{photo.url}});">
-        <a class="chip-link" href="{% pageurl post.specific %}">
-        <h2 class="post-heading">{{ post.specific.title }}</h2>
-        <h5 class="post-date">{{ post.specific.date }}</h5>
-        {% if post.specific.description %}
-        <p class="post-description">{{ post.specific.description }}</p>
-        {% endif %}
+    {% image post.specific.main_image min-600x400 as photo %}
+    <div class="chip" style="background: url({{photo.url}}) no-repeat 50% 50% ;">
+      <a class="chip-link" href="{% pageurl post.specific %}">
+        <div class="chip-container">
+
+          <div class="chip-heading">{{ post.specific.title }}</div>
+          <div class="chip-date">{{ post.specific.date }}</div>
+          {% if post.specific.tags %}
+          <p class="chip-description">{{ post.specific.description }}</p>
+          {% endif %}
+        </div>
       </a>
-      </div>
+    </div>
     {% endfor %}
   </div>
 </main>
