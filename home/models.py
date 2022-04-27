@@ -16,5 +16,5 @@ class HomePage(Page):
 
     def blogs(self):
         blogs = BlogPage.objects.live()
-        blogs = blogs.order_by("-date")[:6]
+        blogs = blogs.order_by("-date")[:3]
         return blogs
