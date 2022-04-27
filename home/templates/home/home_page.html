@@ -1,34 +1,20 @@
-{% extends "base.html" %} {% load static wagtailcore_tags wagtailimages_tags %}
+{% extends "base.html" %} 
+{% load static wagtailcore_tags wagtailimages_tags %}
+
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/home/home_page.css' %}" />
-{% endblock %} {% block content %}
-<!-- <main class="home-page">
-  <div class="home-background"></div>
-  <div class="card-container">
-    {% for blog in page.blogs %}
-    <div class="card">
-      {% image blog.specific.main_image fill-900x900 as photo %}
-      <img src="{{ photo.url }}" alt="{{ photo.title }}" class="card-img" />
-      <h2 class="card-heading">{{blog.specific.title}}</h2>
-      <span class="card-date">{{blog.specific.date}}</span>
-      <a href="{% pageurl blog.specific %}" class="card-button">
-        Read
-      </a>
-    </div>
-    {% endfor %}
-  </div>
-</main>  -->
+{% endblock %} 
 
+{% block content %}
 <main>
   <div class="home-background"></div>
   <div class="cards">
-    {% for blog in page.blogs %} {% image blog.specific.main_image fill-650x600 as photo %}
+    {% for blog in page.blogs %} 
+    {% image blog.specific.main_image fill-650x600 as photo %}
     <div class="card" style="background: url({{photo.url}}) center;">
       <a href="{% pageurl blog.specific %}">
         <div class="card-container">
-          <div class="card-heading">
-            {{blog.specific.title}}
-          </div>
+          <div class="card-heading">{{blog.specific.title}}</div>
           <div class="row">
             <a href="{% pageurl blog.specific %}" class="card-button"> Read </a>
             <div class="card-date">{{blog.specific.date}}</div>
