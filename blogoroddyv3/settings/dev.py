@@ -19,6 +19,7 @@ DATABASES = {
     }
 }
 
+
 try:
     from .local import *
 except ImportError:
