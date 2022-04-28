@@ -21,7 +21,7 @@
   padding: 0;
   color: #ffe074;
   font-family: "Merriweather", serif;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .blog__container {
@@ -119,6 +119,11 @@
   .block__content {
     font-size: 1rem;
     color: red;
+  }
+
+  .blog__header-container {
+    text-align: center;
+    margin: 5% auto;
   }
 
   .stream__photo-container img {
