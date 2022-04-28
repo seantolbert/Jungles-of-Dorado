@@ -1,5 +1,5 @@
 .blog_page-background {
-    background: #eae7d3;
+    background: url(../../images/homepage2.jpg);
     filter: brightness(80%);
     height: 100%;
     width: 100%;
@@ -21,6 +21,7 @@
     padding: 0;
     color: #ffe074;
     font-family: "Merriweather", serif;
+    font-size: 4rem;
   }
   
   .blog__container {
