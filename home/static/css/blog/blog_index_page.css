@@ -1,5 +1,6 @@
 .index-background {
     background-image: url(../../images/all-posts.jpeg);
+    filter: brightness(80%);
   }
   
   .index__header-container {

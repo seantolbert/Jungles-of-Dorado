@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap");
 
 * {
   margin: 0;
@@ -23,7 +23,6 @@ a {
 .about-background,
 .index-background,
 .search-background {
-  filter: brightness(80%);
   width: 100%;
   height: 100%;
   position: fixed;
@@ -36,12 +35,10 @@ a {
   background-position: center;
 }
 
-
-
 /* navbar*/
 
 .custom-navbar {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -50,21 +47,24 @@ a {
   padding: 15px;
 }
 
-.logo-container {
-  justify-self: flex-start;
+.logo-link {
+  padding-top: 4px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .logo-image {
-  width: 18px;
+  width: 25px;
   height: auto;
-  margin-top: 8px;
+  margin-right: 3px;
 }
 
 .logo-title {
   color: #ffe074;
   font-size: 20px;
   font-weight: bold;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
+  padding-bottom: 5px; 
 }
 
 .menu-container {
@@ -72,7 +72,6 @@ a {
   justify-self: center;
   position: relative;
 }
-
 
 .selected {
   background: #ffe074;
@@ -87,8 +86,8 @@ a {
   padding: 8px 20px 0 0;
 }
 
-
 .navlist span {
+  font-weight: bold;
   color: white;
   padding: 5px;
   border-radius: 10px;
@@ -107,12 +106,12 @@ a {
 
 .nav__search-input {
   border-radius: 5px;
-  background: rgba( 0, 0, 0, 0.37 );
+  background: rgba(0, 0, 0, 0.37);
   border: none;
   padding: 5px 25px 5px 5px;
   color: white;
   font-size: 1.2rem;
-  width: 150px;;
+  width: 150px;
 }
 
 .nav__search-input:focus {
@@ -145,19 +144,19 @@ a {
   color: black;
 }
 
-@media (hover:hover) {
+@media (hover: hover) {
   .nav__search-button:hover {
     background: #ffe074;
     color: black;
   }
-  
+
   .custom-navbar label:hover {
     background: #ffe074;
     color: black;
   }
 }
-  
-#toggler, 
+
+#toggler,
 .custom-navbar label {
   display: none;
 }
@@ -169,11 +168,10 @@ a {
 }
 
 @media screen and (max-width: 700px) {
-
   .logo-title {
     display: unset;
   }
-  
+
   .menu-container {
     transition: transform 0.3s ease-out;
     transform: scaleY(0);
@@ -187,12 +185,12 @@ a {
     right: 0;
     top: 50px;
     margin: 5px;
-    background: rgba( 138, 138, 138, 0.45 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 7.5px );
-    -webkit-backdrop-filter: blur( 7.5px );
+    background: rgba(138, 138, 138, 0.45);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
     z-index: 1000;
     align-items: flex-end;
     width: min-content;
@@ -229,7 +227,7 @@ a {
     top: unset;
   }
 
-  #toggler:checked ~ .menu-container{
+  #toggler:checked ~ .menu-container {
     transform: scaleY(1);
   }
 }
