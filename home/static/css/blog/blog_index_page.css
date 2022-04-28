@@ -46,7 +46,7 @@
 }
 
 .chip-description {
-  padding: 0 9px 0 2px;
+  padding: 1px 5px;
   background: black;
   border-radius: 5px 0 0 5px;
   text-align: right;
@@ -59,8 +59,16 @@
   line-clamp: 2;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
-  line-height: 1.04rem;
+  /* line-height: 1.27rem; */
 }
+
+.chip-date {
+  background: rgba(64, 64, 64, 0.89);
+  padding: 2px;
+  color: white;
+  border-radius: 5px 0 0 5px;
+}
+
 
 .chip-tags {
   display: flex;
