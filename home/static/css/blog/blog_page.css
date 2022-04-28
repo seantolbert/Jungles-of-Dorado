@@ -1,5 +1,7 @@
 .blog_page-background {
-  background: url(../../images/homepage2.jpg);
+  /* background: url(../../images/blog_page.jpeg);
+  filter: brightness(80%); */
+  background: #eae7d3;
   filter: brightness(80%);
   height: 100%;
   width: 100%;
