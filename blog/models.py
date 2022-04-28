@@ -65,15 +65,10 @@ class BlogPage(Page):
     ]
 
 
-
-
 class BlogIndexPage(Page):
     
     def get_context(self, request, *args, **kwargs):
         context = super().get_context(request, *args, **kwargs)
         all_posts = BlogPage.objects.live().order_by("-date")
-        if request.GET.get('tag', None):
-            tags = request.GET.get('tags')
-            all_posts = all_posts.filter(tags__slug__in=[tags])
         context["blogs"] = all_posts
         return context

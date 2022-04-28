@@ -1,7 +1,7 @@
 .index-background {
   background-image: url(../../images/all-posts.jpeg);
   filter: brightness(80%);
-}  
+}
 
 .chip-list {
   display: flex;
@@ -34,7 +34,7 @@
 
 .chip-heading {
   font-size: 2rem;
-  background: rgba(64, 64, 64, 0.7);;
+  background: rgba(64, 64, 64, 0.7);
   text-align: right;
   float: right;
   width: fit-content;
@@ -51,7 +51,7 @@
   border-radius: 5px 0 0 5px;
   text-align: right;
   color: #ffe074;
-  font-family: monospace;
+  font-family: 'Merriweather', serif;
   font-size: 1rem;
   overflow: hidden;
   display: -webkit-box;

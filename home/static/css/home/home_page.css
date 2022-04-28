@@ -41,6 +41,7 @@
   overflow: hidden;
   border: 0px;
   border-radius: 10px;
+  /* filter: brightness(50%); */
 }
 
 .card-container {
@@ -51,6 +52,7 @@
   justify-content: space-between;
   width: 100%;
   border: 0px;
+  z-index: 120;
 }
 
 .card-heading {
