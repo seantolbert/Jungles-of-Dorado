@@ -252,7 +252,7 @@ a {
   background: rgba(0, 0, 0, 0.37);;
   color: #ffe074;
   display: flex;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   justify-content: space-between;
   padding: 20px 15px;
