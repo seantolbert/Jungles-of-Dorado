@@ -241,3 +241,24 @@ a {
     transform: scaleY(1);
   }
 }
+
+#footer {
+  width: 100vw;
+  background: black;
+  color: white;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  justify-content: space-between;
+  padding: 20px 15px;
+  font-family: "Merriweather", serif;
+}
+
+.social span {
+  margin: 0 20px;
+  font-size: 0.8rem;
+}
+
+.social span a {
+  color: white;
+}
