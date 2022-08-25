@@ -252,8 +252,6 @@ a {
   background: rgba(0, 0, 0, 0.37);;
   color: #ffe074;
   display: flex;
-  /* position: fixed; */
-  /* bottom: 0; */
   justify-content: space-between;
   padding: 50px 15px;
   font-family: "Merriweather", serif;

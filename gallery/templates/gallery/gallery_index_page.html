@@ -8,15 +8,17 @@
     <div class="gallery-items">
       {% for post in page.posts %}
       <div class="gallery-item">
-        {% comment %} <a href="{% pageurl post.specific %}" class="content"> {% endcomment %}
+        <a hx-get="{% pageurl post.specific %}" hx-target='#dialog'>
           {% image post.specific.gallery_photo fill-300x300 as photo %}
           <img class="gallery-photo" src="{{photo.url}}" alt="{{ photo.title }}">
-        {% comment %} </a> {% endcomment %}
+        </a>
       </div>
-      
       {% endfor %}
     </div>
   </section>
+  <div id="'modal" class="modal fade">
+    <div id="dialog" class="modal-dialog" ht-target="this"></div>
+  </div>
 </main>
 
 {% endblock content %}

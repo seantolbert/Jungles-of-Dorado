@@ -1,17 +1,12 @@
-{% extends 'base.html' %} 
-{% load static wagtailcore_tags wagtailimages_tags %} 
-
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/gallery/gallery_page.css' %}">
-{% endblock %}
-
-{% block content %}
+{% load static wagtailcore_tags wagtailimages_tags %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/gallery/gallery_page.css' %}" />
+{% endblock %} {% block content %}
 <div class="gallery-background"></div>
 
 <main>
   <div class="gallery-page__container">
-    {% image page.gallery_photo min-1000x800 as photo %}
-    <img src="{{ photo.url }}" alt="{{ photo.title }}" >
+    {% image page.gallery_photo min-800x800 as photo %}
+    <img src="{{ photo.url }}" alt="{{ photo.title }}" />
   </div>
 </main>
 {% endblock %}
