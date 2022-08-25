@@ -12,3 +12,4 @@ htmx.on("htmx:beforeSwap", (e) => {
     e.detail.shouldSwap = false;
   }
 });
+
