@@ -8,10 +8,10 @@
     <div class="gallery-items">
       {% for post in page.posts %}
       <div class="gallery-item">
-        <a href="{% pageurl post.specific %}" class="content">
+        {% comment %} <a href="{% pageurl post.specific %}" class="content"> {% endcomment %}
           {% image post.specific.gallery_photo fill-300x300 as photo %}
           <img class="gallery-photo" src="{{photo.url}}" alt="{{ photo.title }}">
-        </a>
+        {% comment %} </a> {% endcomment %}
       </div>
       
       {% endfor %}
