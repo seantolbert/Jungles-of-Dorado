@@ -1,0 +1,17 @@
+.project_page-background {
+    background-image: url(../../images/projects.webp);
+    filter: brightness(60%);
+}
+
+.project-container {
+    margin: 10% auto;
+    font-family: "Merriweather", serif;
+    width: 80%;
+    height: 80vh;
+    color: #ffe074;
+  }
+
+  .project {
+    background: white;
+    width: 100%;
+  }

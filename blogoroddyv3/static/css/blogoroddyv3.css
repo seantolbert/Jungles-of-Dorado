@@ -27,7 +27,8 @@ a {
 .home-background,
 .about-background,
 .index-background,
-.search-background {
+.search-background,
+.project_page-background {
   width: 100%;
   height: 100%;
   position: fixed;

@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'blog',
     'about',
     'gallery',
+    'projects',
 
     'storages',
 

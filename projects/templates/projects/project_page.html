@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% load static wagtailcore_tags %} 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/projects/project_page.css' %}" />
+{% endblock extra_css %} 
+{% block content %}
+{% comment %} {% include_block page.body %} {% endcomment %}
+<div class="project_page-background"></div>
+<div class="project-container">
+  one project here big boiii
+  {% for block in page.project %}
+  <div class="project">
+    <span>{{ block.value.label }}</span>
+    <span>{{ block.value.description }}</span>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock content %}
