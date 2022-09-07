@@ -13,6 +13,8 @@ from modelcluster.fields import ParentalKey
 from modelcluster.contrib.taggit import ClusterTaggableManager
 from taggit.models import TaggedItemBase
 
+import numpy as np
+
 
 class BlogPageTag(TaggedItemBase):
     content_object = ParentalKey(
@@ -63,8 +65,13 @@ class BlogPage(Page):
     search_fields = Page.search_fields + [
         index.SearchField('tags')
     ]
+    
+    def random_blog(self):
+        all_posts = BlogPage.objects.live()
+        random = np.random.randint(0, len(all_posts))
+        return all_posts[random]
 
-
+        
 class BlogIndexPage(Page):
     
     def get_context(self, request, *args, **kwargs):

@@ -4,7 +4,7 @@ from wagtail.core.models import Page
 from wagtail.admin.edit_handlers import FieldPanel
 
 from blog.models import BlogPage
-from gallery.models import GalleryPage
+# from gallery.models import GalleryPage
 
 
 class HomePage(Page):
@@ -17,5 +17,11 @@ class HomePage(Page):
 
     def blogs(self):
         blogs = BlogPage.objects.live()
-        blogs = blogs.order_by("-date")[:3]
+        blogs = blogs.order_by("-date")[:6]
         return blogs
+    
+    def blog_index(self):
+        blogs = BlogPage.objects.live()
+        blog = map(lambda b: b.index(), blogs)
+        print(blog)
+        return blog

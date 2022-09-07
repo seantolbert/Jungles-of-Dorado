@@ -16,7 +16,7 @@
       {% for tag in page.tags.all %}
       <a href="/search/?query={{ tag.slug }}">{{tag}}</a>
       {% endfor %}
-    </div> {% endcomment %}
+    </div>  {% endcomment %}
     <div class="blog__photo-container">
       {% image page.main_image max-800x400 as photo %}
       <img class="blog__photo" src="{{photo.url}}" alt="{{photo.title}}"/>
@@ -40,6 +40,11 @@
         {% endif %} 
       {% endfor %}
     </div>
+    <button class="next-button">
+      <a href="{% pageurl page.random_blog.specific %}">
+        Next
+      </a>
+    </button>
   </div>
 </main>
 
