@@ -1,0 +1,34 @@
+.project_page-background {
+    background-image: url(../../images/projects.webp);
+    filter: brightness(50%);
+}
+
+.project-container {
+    margin: 10% auto;
+    font-family: "Merriweather", serif;
+    width: 80%;
+    height: 70vh;
+    color: #ffe074;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .project {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* margin:  20px 0; */
+    align-items: center;
+  }
+
+  .project__title {
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+
+  .project__description {
+    width: 70%;
+    font-size: 1.5rem;
+    color: white;
+  }

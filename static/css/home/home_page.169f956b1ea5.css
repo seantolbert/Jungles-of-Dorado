@@ -1,0 +1,135 @@
+.home-background {
+  background-image: url("../../images/homepage2.4ce9b84e07cb.jpg");
+  filter: brightness(70%);
+}
+
+.header-container {
+  display: flex;
+  width: 80%;
+  margin: 5% 10%;
+  flex-direction: column;
+}
+
+.headline {
+  font-family: 'Merriweather', serif;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.subheadline {
+  font-weight: bold;
+  font-family: 'Merriweather', serif;
+  font-size: 1.3rem;
+  color: #ffe074;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin: 9% auto;
+  padding: 10px;
+  border: 0px;
+}
+
+.card {
+  width: 100%;
+  height: 370px;
+  overflow: hidden;
+  border: 0px;
+  border-radius: 10px;
+  /* filter: brightness(50%); */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: inherit;
+  justify-content: space-between;
+  width: 100%;
+  border: 0px;
+  z-index: 120;
+}
+
+.card-heading {
+  font-weight: bold;
+  margin-top: 40px;
+  padding: 5px;
+  font-size: 2.1rem;
+  width: fit-content;
+  max-width: 85%;
+  border-radius: 0 10px 10px 0;
+  border: 0px;
+  background: rgba(64, 64, 64, 0.7);
+  color: #ffe074;
+  font-family: "Merriweather", serif;
+}
+
+.row {
+  display: flex;
+  width: inherit;
+  border: 0px;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.card-date {
+  color: white;
+  justify-self: end;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+  background: rgba(64, 64, 64, 0.7);
+  font-size: 1.1rem;
+  right: 0;
+  font-family: "Merriweather", serif;
+  float: right;
+}
+
+.card-button {
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  background: rgba(64, 64, 64, 0.7);
+  font-size: 1.2rem;
+  transition: all 0.5s ease;
+  font-family: "Merriweather", serif;
+  color: #ffe074;
+  font-weight: bold;
+  position: absolute;
+  margin-left: 10px;
+}
+
+.card-button:active {
+  background: #ffe074;
+  color: black;
+}
+
+@media (hover: hover) {
+  .card-button:hover {
+    font-size: 1.3em;
+    background: #ffe074;
+    color: black;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+
+  .headline {
+    font-size: 3rem;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 30%;
+  }
+}

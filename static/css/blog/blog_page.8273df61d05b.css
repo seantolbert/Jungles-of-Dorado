@@ -1,0 +1,154 @@
+.blog_page-background {
+  /* background: url("../../images/blog_page.e32304df5ca7.jpeg");
+  filter: brightness(80%); */
+  background: #eae7d3;
+  filter: brightness(80%);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.blog__header-container {
+  text-align: center;
+  margin: 5% auto;
+  max-width: 96ch;
+  align-items: center;
+}
+
+.blog__header {
+  padding: 0;
+  color: #ffe074;
+  font-family: "Merriweather", serif;
+  font-size: 3rem;
+}
+
+.blog__container {
+  max-width: 96ch;
+  margin: 5% auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background: rgb(246, 243, 223);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
+    0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
+    0 20px 1px -9px rgba(0, 0, 0, 0.15);
+  padding: 2% 3%;
+  overflow: hidden;
+}
+
+.blog__photo-container {
+  margin: 2% auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog__photo {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.blog-photo__excerpt {
+  color: grey;
+  text-align: right;
+  font-size: 0.7rem;
+}
+
+.blog__content {
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stream__header {
+  margin: 5% 0;
+}
+
+.stream__photo-container {
+  margin: 5% auto;
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+
+.stream__photo-container img {
+  margin: 0 auto;
+  height: auto;
+  width: auto;
+}
+
+.stream__photoblock-container {
+  display: flex;
+  flex-direction: column;
+  margin: 5% 0;
+}
+.stream__photoblock-container img {
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+}
+.stream__photo-caption {
+  color: grey;
+  text-align: right;
+  font-size: 0.7rem;
+}
+
+.block-content {
+  color: #000000;
+  width: 100%;
+  font-size: 1.3rem;
+  font-family: monospace;
+  line-height: 2rem;
+}
+
+.block-content p {
+  padding-top: 20px;
+}
+
+.block-content p:nth-child(1):first-letter {
+  font-size: 3rem;
+  float: left;
+  margin-right: 10px;
+}
+
+.next-button {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.37);
+  border: none;
+  border-radius: 3px;
+  margin-top: 100px;
+}
+
+.next-button a {
+  color: #ffe074;
+  font-size: 1.5rem;
+  font-family: "Merriweather", serif;
+}
+
+@media screen and (max-width: 500px) {
+  .block__content {
+    font-size: 1rem;
+    color: red;
+  }
+
+  .blog__header-container {
+    text-align: center;
+    margin: 5% auto;
+  }
+
+  .stream__photo-container img {
+    width: 100%;
+  }
+
+  .stream__photoblock-container img {
+    width: 100%;
+  }
+}

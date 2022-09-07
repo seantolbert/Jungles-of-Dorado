@@ -1,0 +1,25 @@
+.gallery-background {
+  background: #eae7d3;
+  filter: brightness(80%);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.gallery-page__container {
+  margin: 10% 3%;
+  display: flex;
+  height: 100vh;
+}
+
+.gallery-page__container img {
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
