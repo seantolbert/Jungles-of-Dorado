@@ -1,6 +1,6 @@
 .project_page-background {
     background-image: url(../../images/projects.webp);
-    filter: brightness(50%);
+    filter: brightness(40%);
 }
 
 .project-container {
@@ -31,4 +31,28 @@
     width: 70%;
     font-size: 1.5rem;
     color: white;
+  }
+  
+  @media screen and (max-width: 600px) {
+
+    .project_page-background {
+      background-image: url(../../images/projects.webp);
+      filter: brightness(30%);
+  }
+
+    .project {
+      align-items: flex-start;
+    }
+
+    .project__title {
+      font-size: 1.5rem;
+      font-weight: lighter;
+    }
+  
+    .project__description {
+      width: 70%;
+      font-size: 1rem;
+      color: white;
+    }
+    
   }
