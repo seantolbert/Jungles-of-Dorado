@@ -4,14 +4,18 @@ main {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
 }
 
-.tolbert {
-  /* position: absolute; */
-  /* bottom: 0; */
+.tolbert-container {
+  margin-top: 40px;
   text-align: center;
-  color: #ffe074;
-  font-weight: bold;
+  width: 100%;
+}
+
+.tolbertco {
+  color: white;
+  font-size: 0.7rem;
 }
 
 .about-background {
@@ -23,14 +27,6 @@ main {
   margin: 10% auto;
   font-family: "Merriweather", serif;
   width: 50%;
-}
-
-.about-title {
-  font-size: 4rem;
-  text-align: center;
-  margin-bottom: 2%;
-  color: white;
-  font-weight: bold;
 }
 
 .about-description {
@@ -49,6 +45,12 @@ main {
 @media screen and (max-width: 650px) {
   .about-container {
     width: 80%;
+  }
+
+  .about-description {
+    font-size: 1.4rem;
+    color: white;
+    text-align: center;
   }
 
   .about-email {
