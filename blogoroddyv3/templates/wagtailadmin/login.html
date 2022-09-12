@@ -1,0 +1,21 @@
+{% extends "wagtailadmin/login.html" %}
+
+{% block branding_login %}Sign in to Jungles of Dorado's admin dashboard{% endblock %}
+
+{% block above_login %} If you are not Roddy you should not be here! {% endblock %}
+{% block below_login %} But seriously, if you are not Roddy you should not be here! {% endblock %}
+
+{% block login_form %}
+    <p>Some extra form content</p>
+    {{ block.super }}
+{% endblock %}
+
+{% block fields %}
+    {{ block.super }}
+    <li>
+        <div>
+            <label for="id_two-factor-auth">Two factor auth token</label>
+            <input type="text" name="two-factor-auth" id="id_two-factor-auth">
+        </div>
+    </li>
+{% endblock %}
