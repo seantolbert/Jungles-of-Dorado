@@ -1,3 +1,4 @@
+from sqlite3 import Date
 from django.db import models
 from django.utils import timezone
 
@@ -8,10 +9,14 @@ from wagtail.search import index
 from wagtail.images.blocks import ImageChooserBlock
 from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
+from wagtail.api import APIField
+
+from rest_framework.fields import DateField
 
 from modelcluster.fields import ParentalKey
 from modelcluster.contrib.taggit import ClusterTaggableManager
 from taggit.models import TaggedItemBase
+
 
 import numpy as np
 
@@ -53,6 +58,16 @@ class BlogPage(Page):
         null=True,
     )
 
+    api_fields = [
+        APIField('date', serializer=DateField(format='%A %d %B %Y')),
+        APIField('main_image'),
+        APIField('main_image_excerpt'),
+        APIField('description'),
+        APIField('body'),
+        APIField('tags')
+    ]
+                                            
+
     content_panels = Page.content_panels + [
         FieldPanel("date"),
         FieldPanel("description"),
@@ -79,3 +94,4 @@ class BlogIndexPage(Page):
         all_posts = BlogPage.objects.live().order_by("-date")
         context["blogs"] = all_posts
         return context
+
