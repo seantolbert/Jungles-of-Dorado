@@ -22,6 +22,7 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
+# ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -51,6 +52,8 @@ INSTALLED_APPS = [
 
     'modelcluster',
     'taggit',
+    'corsheaders',
+    'rest_framework',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -59,16 +62,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'rest_framework',
-    'corsheaders',
 
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
-    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -187,6 +188,8 @@ AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % config('AWS_STORAGE_BUCKET_NAME')
 
 # API
 
+# CORS_ALLOW_ALL_ORIGINS = True
+
 CORS_ALLOWED_ORIGINS = [
-    "https://localhost:5173"
+    "http://localhost:5173"
 ]
