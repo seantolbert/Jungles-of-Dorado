@@ -21,6 +21,11 @@
       <a href="{% pageurl blog.specific %}">
         <div class="card-container">
           <div class="card-heading">{{blog.specific.title}}</div>
+          {% if blog.specific.description %}
+          <div class="blog-description__container">
+            <div class="blog-description">{{blog.specific.description}}</div>
+          </div>
+          {% endif %}
           <div class="row">
             <a href="{% pageurl blog.specific %}" class="card-button"> Read </a>
             <div class="card-date">{{blog.specific.date}}</div>

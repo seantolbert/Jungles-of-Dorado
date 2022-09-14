@@ -2,13 +2,17 @@
 
 {% block branding_login %}Sign in to Jungles of Dorado's admin dashboard{% endblock %}
 
-{% block above_login %} If you are not Roddy you should not be here! {% endblock %}
+{% block above_login %} 
+<div class="warn">
+    If you are not Roddy you should not be here!
+</div>
+{% endblock %}
 {% block below_login %} But seriously, if you are not Roddy you should not be here! {% endblock %}
 
-{% block login_form %}
+{% comment %} {% block login_form %}
     <p>Some extra form content</p>
     {{ block.super }}
-{% endblock %}
+{% endblock %} {% endcomment %}
 
 {% block fields %}
     {{ block.super }}
