@@ -1,5 +1,5 @@
 .project_page-background {
-    background-image: url(../../images/JOD_background2.jpeg);
+    /* background-image: url(../../images/JOD_background2.jpeg); */
     filter: brightness(50%);
 }
 
@@ -36,7 +36,7 @@
   @media screen and (max-width: 600px) {
 
     .project_page-background {
-      background-image: url(../../images/JOD_background2.jpeg);
+      /* background-image: url(../../images/JOD_background2.jpeg); */
       filter: brightness(30%);
   }
 

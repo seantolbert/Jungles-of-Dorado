@@ -9,7 +9,6 @@ from wagtail.core.fields import StreamField
 from wagtail.search import index
 from wagtail.images.blocks import ImageChooserBlock
 from wagtail.images.edit_handlers import ImageChooserPanel
-from wagtail.images.api.fields import ImageRenditionField
 from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
 from wagtail.api import APIField
 
