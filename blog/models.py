@@ -1,8 +1,6 @@
 from django.db import models
 from django.utils import timezone
 
-
-
 from wagtail.core import blocks
 from wagtail.core.models import Page
 from wagtail.core.fields import StreamField
@@ -79,7 +77,9 @@ class BlogPage(Page):
     ]
 
     search_fields = Page.search_fields + [
-        index.SearchField('tags')
+        index.SearchField('tags', partial_match=True),
+        index.SearchField('body', partial_match=True, boost=10),
+        index.SearchField('description', partial_match=True, boost=10)
     ]
     
     def random_blog(self):
