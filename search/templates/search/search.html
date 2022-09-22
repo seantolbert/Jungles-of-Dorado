@@ -40,11 +40,11 @@
             <div class="result-title">
               {{ result }} 
             </div>
-            <div class="result-description">
+            {% comment %} <div class="result-description">
               {% if result.specific.description %}
               {{result.specific.description}}
               {% endif %}
-            </div>
+            </div> {% endcomment %}
             {% if result.tags %}
             <div class="tags">
               {% for tag in result.tags %}
