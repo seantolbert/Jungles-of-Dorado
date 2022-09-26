@@ -134,13 +134,22 @@
 
 /* streamfields */
 
-.stream__header {
-  color: white;
-}
+.stream_header__container {}
 
-.block-top_content {
-  color: white;
-}
+.stream_headline {}
+
+.stream_image__container {}
+
+.stream_image {}
+
+.stream_imageTwo__container {}
+
+.stream__imageTwo {}
+
+.stream_content {}
+
+
+
 
 
 
