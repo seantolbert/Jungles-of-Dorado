@@ -27,28 +27,9 @@ class HomePage(Page):
     )
     headline = models.CharField(max_length=100, blank=True, null=True)
     sub_headline = models.CharField(max_length=200, blank=True, null=True)
-    
-    above_posts = StreamField(
-        [
-            ("stream_heading", blocks.CharBlock()),
-            ("stream_image", ImageChooserBlock(required=False)),
-            ("stream_image2", ImageChooserBlock(required=False)),
-            ("content", blocks.RichTextBlock()),
-        ],
-        null=True,
-        blank=True,
-    )
 
-    below_posts = StreamField(
-        [
-            ("stream_heading", blocks.CharBlock()),
-            ("stream_image", ImageChooserBlock(required=False)),
-            ("stream_image2", ImageChooserBlock(required=False)),
-            ("content", blocks.RichTextBlock()),
-        ],
-        null=True,
-        blank=True,
-    )
+    above_posts = StreamField([("top_content", NewsBlock())], blank=True, null=True)
+    below_posts = StreamField([("bottom_content", NewsBlock())], blank=True, null=True)
 
     content_panels = Page.content_panels + [
         ImageChooserPanel("background_img"),
