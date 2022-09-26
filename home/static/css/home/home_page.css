@@ -11,14 +11,14 @@
 }
 
 .headline {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   color: white;
   font-size: 2.5rem;
 }
 
 .subheadline {
   font-weight: bold;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   font-size: 1.3rem;
   color: #ffe074;
 }
@@ -130,6 +130,18 @@
   color: black;
 }
 
+
+
+/* streamfields */
+
+.stream__header {
+  color: white;
+}
+
+
+
+
+
 @media (hover: hover) {
   .card-button:hover {
     font-size: 1.3em;
@@ -139,7 +151,6 @@
 }
 
 @media only screen and (min-width: 600px) {
-
   .headline {
     font-size: 3rem;
   }

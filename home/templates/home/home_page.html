@@ -14,6 +14,31 @@
     <div class="subheadline">{{page.sub_headline}}</div>
   </div>
 
+  {% for block in page.above_posts %}
+    {% if block.block_type == 'heading' %}
+      <div class="block-{{block.block_type}}">
+        {{block.value}}
+      </div>
+      
+    {% elif block.block_type == 'image' %}
+      <div class="block-{{block.block_type}}">
+        {% image block.value.image max-700x600 as photo %}
+        <img src="{{photo.url}}" alt="Update" />
+      </div>
+
+    {% elif block.block_type == 'image2' %}
+      <div class="block-{{block.block_type}}">
+        {% image block.value.image max-700x600 as photo %}
+        <img src="{{photo.url}}" alt="Update" />
+      </div>
+
+    {% else %}
+      <div class="block-{{block.block_type}}">
+        {{block.value}}
+      </div>
+
+    {% endif %}
+  {% endfor %}
 
   <div class="cards">
     {% for blog in page.blogs %} 
@@ -36,6 +61,33 @@
     </div>
     {% endfor %}
   </div>
+
+  {% for block in page.below_posts %}
+  {% if block.block_type == 'heading' %}
+    <div class="stream__header">
+      {{block.value}}
+    </div>
+    
+  {% elif block.block_type == 'image' %}
+    <div class="block-{{block.block_type}}">
+      {% image block.value.image max-700x600 as photo %}
+      <img src="{{photo.url}}" alt="Update" />
+    </div>
+
+  {% elif block.block_type == 'image2' %}
+    <div class="block-{{block.block_type}}">
+      {% image block.value.image max-700x600 as photo2 %}
+      <img src="{{photo2.url}}" alt="Update" />
+    </div>
+
+  {% else %}
+    <div class="block-{{block.block_type}}">
+      {{block.value}}
+    </div>
+
+  {% endif %}
+{% endfor %}
+
 </main>
 
 {% endblock content %}
