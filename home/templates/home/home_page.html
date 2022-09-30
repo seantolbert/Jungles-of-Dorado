@@ -60,25 +60,25 @@
 
 
 
-<div class="stream__container">
-  {% for block in page.below_posts %}
-    {% if block.block_type == 'extra_headline' %}
-    <div class="stream_headline">
-      {{block.value}}
-    </div>
-    {% elif block.block_type == 'cardblock' %}
-    {% image block.value.image original as photo %}
-    <div 
-      style="background: url({{photo.url}}) no-repeat 50% 50%;"
-      class="stream_card__container" 
-    >
-      <div class="stream_content">
-        {{block.value.content}}
+  <div class="stream__container">
+    {% for block in page.below_posts %}
+      {% if block.block_type == 'extra_headline' %}
+      <div class="stream_headline">
+        {{block.value}}
       </div>
-    </div>
-    {% endif %}
-  {% endfor %}
-</div>
+      {% elif block.block_type == 'cardblock' %}
+      {% image block.value.image original as photo %}
+      <div 
+        style="background: url({{photo.url}}) no-repeat 50% 50%;"
+        class="stream_card__container" 
+      >
+        <div class="stream_content">
+          {{block.value.content}}
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
 </main>
 
 {% endblock content %}
