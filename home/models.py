@@ -14,10 +14,9 @@ from blog.models import BlogPage
 # from gallery.models import GalleryPage
 
 
-class NewsBlock(blocks.StructBlock):
-    header = blocks.CharBlock()
+    # header = blocks.CharBlock()
+class CardBlock(blocks.StructBlock):
     image = ImageChooserBlock(required=False)
-    imageTwo = ImageChooserBlock(required=False)
     content = blocks.RichTextBlock()
 
 
@@ -28,8 +27,15 @@ class HomePage(Page):
     headline = models.CharField(max_length=100, blank=True, null=True)
     sub_headline = models.CharField(max_length=200, blank=True, null=True)
 
-    above_posts = StreamField([("top_content", NewsBlock())], blank=True, null=True)
-    below_posts = StreamField([("bottom_content", NewsBlock())], blank=True, null=True)
+    above_posts = StreamField([
+        ("cardblock", CardBlock()),
+        ("extra_headline", blocks.RichTextBlock())
+        ], blank=True, null=True)
+
+    below_posts = StreamField([
+        ("cardblock", CardBlock()),
+        ("extra_headline", blocks.RichTextBlock())
+        ], blank=True, null=True)
 
     content_panels = Page.content_panels + [
         ImageChooserPanel("background_img"),

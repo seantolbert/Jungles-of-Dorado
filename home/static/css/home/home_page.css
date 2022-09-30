@@ -134,9 +134,19 @@
 
 /* streamfields */
 
-.stream_header__container {}
+.below_stream__container {
+  color: white;
+  width: 80%;
+  margin: 5% 10%;
+}
 
-.stream_headline {}
+.stream_header__container {
+}
+
+.stream_headline {
+  font-size: 2.5rem;
+  color: white;
+}
 
 .stream_image__container {}
 
@@ -148,6 +158,22 @@
 
 .stream_content {}
 
+.stream_content a {
+  color: white;  
+}
+
+.header-container {
+  display: flex;
+  width: 80%;
+  margin: 5% 10%;
+  flex-direction: column;
+}
+
+.headline {
+  font-family: "Merriweather", serif;
+  color: white;
+  font-size: 2.5rem;
+}
 
 
 

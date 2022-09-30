@@ -49,27 +49,32 @@
     </div>
     {% endfor %}
   </div>
+
+
+
 <div class="below_stream__container">
   {% for block in page.below_posts %}
     {% if block.block_type == 'bottom_content' %}
       <div class="stream_header__container">
-        <div class="stream_headline"></div>
-        {{block.value.header}}
-        {% if block.value.image %}
-        <div class="stream_image__container">
-          {% image block.value.image max-700x600 as photo %}
-          <img class="stream_image" src="{{photo.url}}" alt="Update" />
+        <div class="stream_headline">
+          {{block.value.header}}
         </div>
-        {% endif %}
-        {% if block.value.imageTwo %}
-        <div class="stream_imageTwo__container"></div>
-          {% image block.value.imageTwo max-700x600 as photo2 %}
-          <img class="stream_imageTwo" src="{{photo2.url}}" alt="Update" />
-        {% endif %}
-        <div class="stream_content"></div>
-        {{block.value.content}}
+      </div>
+      {% if block.value.image %}
+      <div class="stream_image__container">
+        {% image block.value.image max-700x600 as photo %}
+        <img class="stream_image" src="{{photo.url}}" alt="Update" />
       </div>
       {% endif %}
+      {% if block.value.imageTwo %}
+      <div class="stream_imageTwo__container">
+        {% image block.value.imageTwo max-700x600 as photo2 %}
+        <img class="stream_imageTwo" src="{{photo2.url}}" alt="Update" />
+      </div>
+      {% endif %}
+      <div class="stream_content"></div>
+      {{block.value.content}}
+    {% endif %}
   {% endfor %}
 </div>
 </main>
