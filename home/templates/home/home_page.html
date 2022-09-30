@@ -14,19 +14,27 @@
     <div class="subheadline">{{page.sub_headline}}</div>
   </div>
 
-  <div class="above_stream__container"></div>
-  {% for block in page.above_posts %}
-    {% if block.block_type == 'top_content' %}
-    <div class="stream__header">
-      {{block.value.header}}
+  <div class="stream__container">
+    {% for block in page.above_posts %}
+      {% if block.block_type == 'extra_headline' %}
+      <div class="stream_header__container">
+        <div class="stream_headline">
+          {{block.value}}
+        </div>
+      </div>
+      {% elif block.block_type == 'cardblock' %}
       {% image block.value.image max-700x600 as photo %}
-      <img src="{{photo.url}}" alt="Update" />
-      {% image block.value.imageTwo max-700x600 as photo2 %}
-      <img src="{{photo2.url}}" alt="Update" />
-      {{block.value.content | safe}}
-    </div>
-    {% endif %}
-  {% endfor %}
+      <div 
+        style="background: url({{photo.url}}) no-repeat 50% 50%;"
+        class="stream_card__container" 
+      >
+        <div class="stream_content">
+          {{block.value.content}}
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
 
   <div class="cards">
     {% for blog in page.blogs %} 
@@ -52,28 +60,22 @@
 
 
 
-<div class="below_stream__container">
+<div class="stream__container">
   {% for block in page.below_posts %}
-    {% if block.block_type == 'bottom_content' %}
-      <div class="stream_header__container">
-        <div class="stream_headline">
-          {{block.value.header}}
-        </div>
+    {% if block.block_type == 'extra_headline' %}
+    <div class="stream_headline">
+      {{block.value}}
+    </div>
+    {% elif block.block_type == 'cardblock' %}
+    {% image block.value.image original as photo %}
+    <div 
+      style="background: url({{photo.url}}) no-repeat 50% 50%;"
+      class="stream_card__container" 
+    >
+      <div class="stream_content">
+        {{block.value.content}}
       </div>
-      {% if block.value.image %}
-      <div class="stream_image__container">
-        {% image block.value.image max-700x600 as photo %}
-        <img class="stream_image" src="{{photo.url}}" alt="Update" />
-      </div>
-      {% endif %}
-      {% if block.value.imageTwo %}
-      <div class="stream_imageTwo__container">
-        {% image block.value.imageTwo max-700x600 as photo2 %}
-        <img class="stream_imageTwo" src="{{photo2.url}}" alt="Update" />
-      </div>
-      {% endif %}
-      <div class="stream_content"></div>
-      {{block.value.content}}
+    </div>
     {% endif %}
   {% endfor %}
 </div>
