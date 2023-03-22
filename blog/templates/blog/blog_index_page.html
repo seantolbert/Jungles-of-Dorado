@@ -3,29 +3,34 @@
 <link rel="stylesheet" href="{% static 'css/blog/blog_index_page.css' %}" />
 {% endblock %} {% block content %}
 <div class="index-background"></div>
-<main>
+<main class="blog-index-page">
   <div class="chip-list">
     {% for post in blogs %} {% image post.specific.main_image min-600x400 as photo %}
-    <div class="chip" style="background: url({{photo.url}}) no-repeat 50% 50% ;"">
-      <a class="chip-link" href="{% pageurl post.specific %}">
-        <div class="chip-container">
-          <div class="chip-heading">{{ post.specific.title }}</div>
-          {% if post.specific.description %}
-          <p class="chip-description">{{ post.specific.description }}</p>
-          {% endif %}
-          <div class="chip-date">{{ post.specific.date }}</div>
-          
-          {% if post.specific.description %}
-          <div class="chip-tags">
-            {% for tag in post.specific.tags.all %}
-            <div class="tag">{{tag}}</div>
-            {% endfor %}
-          </div>
-          {% endif %}
+    <div class="chip-post">
+      <a href="{% pageurl post.specific %}">
+        <div class="background">
+          <img src="{{photo.url}}" alt="{{photo.title}}" />
         </div>
       </a>
+      <div class="chip-info">
+        <div class="chip-heading">{{ post.specific.title }}</div>
+        {% if post.specific.description %}
+        <p class="chip-description">{{ post.specific.description }}</p>
+        <div class="chip-date">{{ post.specific.date }}</div>
+        {% else %}
+        <div class="chip-date">{{ post.specific.date }}</div>
+        {% endif %} {% if post.specific.description %}
+        <div class="chip-tags">
+          {% for tag in post.specific.tags.all %}
+          <div class="tag">{{tag}}</div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
     </div>
+    <!-- </div> -->
     {% endfor %}
   </div>
 </main>
+
 {% endblock content %}
