@@ -1,0 +1,83 @@
+.index-background {
+  background: #eae7d3;
+  filter: brightness(80%);
+}
+
+/* .blog-index-page {
+  max-width: 100vw;
+} */
+
+.chip-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  min-height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  justify-items: stretch;
+}
+
+.chip-post {
+  position: relative;
+  height: 33.33vw;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.background {
+  height: 16.5vw;
+  overflow: clip;
+  display: flex;
+  align-items: center;
+}
+
+.background img {
+  width: 100%;
+}
+
+.chip-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 10px;
+}
+
+.chip-heading {
+  font-size: 2rem;
+}
+
+/* .chip-description {} */
+
+/* .chip-date {} */
+
+.chip-tags {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5px;
+}
+
+.tag {
+  font-size: 0.8rem;
+  font-weight: bold;
+  background: #ffe074;
+  padding: 3px;
+}
+
+/* .tag:last-child {
+  border-radius: 0 0 10px 0;
+} */
+
+@media only screen and (min-width: 600px) {
+  .chip {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .chip {
+    width: 30%;
+  }
+}
