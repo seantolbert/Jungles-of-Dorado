@@ -14,7 +14,6 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   min-height: 100vh;
-  width: 100vw;
   align-items: center;
   justify-content: center;
   justify-items: stretch;
@@ -45,11 +44,9 @@
     height: fit-content;
   }
   .background {
-    height: auto
+    height: auto;
   }
 }
-
-
 
 .background img {
   width: 100%;
