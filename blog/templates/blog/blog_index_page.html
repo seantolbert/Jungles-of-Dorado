@@ -4,6 +4,9 @@
 {% endblock %} {% block content %}
 <div class="index-background"></div>
 <main class="blog-index-page">
+
+  <h1 style="padding:20px">All Posts</h1>
+
   <div class="chip-list">
     {% for post in blogs %} {% image post.specific.main_image min-600x400 as photo %}
     <div class="chip-post">
