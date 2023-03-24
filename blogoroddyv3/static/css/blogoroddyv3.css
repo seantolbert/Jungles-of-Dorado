@@ -258,6 +258,9 @@ a {
   padding: 50px 15px;
   font-family: "Merriweather", serif;
   font-size: 0.8rem;
+  width: 100%;
+  /* position: absolute;
+  bottom: 0; */
 }
 
 .social {

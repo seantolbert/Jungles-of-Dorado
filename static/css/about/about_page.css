@@ -1,6 +1,6 @@
 /* Tolbert Logo */
 main {
-  height: 80vh;
+  /* height: 80vh; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -20,9 +20,9 @@ main {
 }
 
 .about-container {
-  margin: 10% auto;
-  font-family: "Merriweather", serif;
-  width: 50%;
+  /* margin: 10% auto; */
+  /* font-family: "Merriweather", serif; */
+  /* width: 50%; */
 }
 
 .about-title {

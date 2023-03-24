@@ -8,6 +8,8 @@
 } */
 
 .chip-list {
+  padding: 0 50px;
+  margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
@@ -32,6 +34,22 @@
   display: flex;
   align-items: center;
 }
+
+@media only screen and (max-width: 600px) {
+  .chip-list {
+    min-height: unset;
+    display: flex;
+    flex-direction: column;
+  }
+  .chip-post {
+    height: fit-content;
+  }
+  .background {
+    height: auto
+  }
+}
+
+
 
 .background img {
   width: 100%;
