@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap");
 
-
 * {
   border: red;
   margin: 0;
@@ -252,21 +251,23 @@ a {
 }
 
 #footer {
-  width: 100vw;
   background: rgba(0, 0, 0, 0.37);
   color: #ffe074;
   display: flex;
   justify-content: space-between;
-  padding: 50px 0;
+  padding: 50px 15px;
   font-family: "Merriweather", serif;
   font-size: 0.8rem;
 }
 
 .social {
   display: flex;
+  gap: 20px;
 }
 
-
+.social a {
+  color: #ffe074;
+}
 
 @media screen and (max-width: 500px) {
   #footer {
