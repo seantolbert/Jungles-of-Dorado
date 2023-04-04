@@ -1,82 +1,26 @@
-{% extends "base.html" %} 
-{% load static wagtailcore_tags wagtailimages_tags %}
-
+{% extends "base.html" %} {% load static wagtailcore_tags wagtailimages_tags %}
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/home/home_page.css' %}" />
-{% endblock %} 
-
-{% block content %}
-<main>
-  {% image page.background_img original as photo %}
-  <div class="home-background" style="background-image: url({{photo.url}});"></div>
-  <div class="header-container">
-    <div class="headline">{{page.headline}}</div>
-    <div class="subheadline">{{page.sub_headline}}</div>
-  </div>
-
-  <div class="stream__container">
-    {% for block in page.above_posts %}
-      {% if block.block_type == 'extra_headline' %}
-      <div class="stream_header__container">
-        <div class="stream_headline">
-          {{block.value}}
-        </div>
-      </div>
-      {% elif block.block_type == 'cardblock' %}
-      {% image block.value.image max-700x600 as photo %}
-      <div 
-        style="background: url({{photo.url}}) no-repeat 50% 50%;"
-        class="stream_card__container" 
-      >
-        <div class="stream_content">
-          {{block.value.content}}
-        </div>
-      </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-
+{% endblock %} {% block content %}
+<main class="home-page">
   <div class="cards">
-    {% for blog in page.blogs %} 
-    {% image blog.specific.main_image min-580x370 as photo %}
-    <div class="card" style="background: url({{photo.url}}) no-repeat 50% 50%;">
-      <a href="{% pageurl blog.specific %}">
-        <div class="card-container">
-          <div class="card-heading">{{blog.specific.title}}</div>
-          {% if blog.specific.description %}
-          <div class="blog-description__container">
-            <div class="blog-description">{{blog.specific.description}}</div>
-          </div>
-          {% endif %}
-          <div class="row">
-            <a href="{% pageurl blog.specific %}" class="card-button"> Read </a>
-            <div class="card-date">{{blog.specific.date}}</div>
-          </div>
-        </div>
-      </a>
+    {% for galItem in page.galList %} 
+    {% image galItem.specific.gallery_photo min-580x370 as photo %} 
+    {% if galItem.specific.link %}
+
+    <div class="card">
+      <div class="galImg-container"><img src="" alt="" /></div>
     </div>
-    {% endfor %}
-  </div>
 
+    {% else %}
 
-
-  <div class="stream__container">
-    {% for block in page.below_posts %}
-      {% if block.block_type == 'extra_headline' %}
-      <div class="stream_headline">
-        {{block.value}}
+    <a href="{{galItem.specific.link}}">
+      <div class="card">
+        <div><img src="" alt="" /></div>
       </div>
-      {% elif block.block_type == 'cardblock' %}
-      {% image block.value.image original as photo %}
-      <div 
-        style="background: url({{photo.url}}) no-repeat 50% 50%;"
-        class="stream_card__container" 
-      >
-        <div class="stream_content">
-          {{block.value.content}}
-        </div>
-      </div>
-      {% endif %}
+    </a>
+
+    {% endif %}
     {% endfor %}
   </div>
 </main>
