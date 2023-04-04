@@ -10,6 +10,8 @@ from search import views as search_views
 
 from .api import api_router
 
+# from graphene_django.views import GraphQLView
+
 urlpatterns = [
     path('django-admin/', admin.site.urls),
 
@@ -34,6 +36,8 @@ urlpatterns = urlpatterns + [
     # Wagtail's page serving mechanism. This should be the last pattern in
     # the list:
     path('api/v2/', api_router.urls),
+
+    # path('graphql/', GraphQLView.as_view(graphiql=True, pretty=True)),
     
     path("", include(wagtail_urls)),
 
