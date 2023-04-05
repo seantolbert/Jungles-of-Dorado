@@ -1,22 +1,49 @@
 {% load static wagtailimages_tags %}
 
 <nav class="custom-navbar">
-  <div class="logo-container">
-    <a class="logo-link" href="/">
-      <img src="{% static 'images/sun_savage2.png' %}" alt="The Sun Savage" class="logo-image">
-      <p class="logo-title">Jungles</p>
-      <p class="of">of</p>  
-      <p class="logo-title">Dorado</p>
-    </a>
+  <a class="logo-container" href="/">
+    <img
+      src="{% static 'images/sun_savage2.png' %}"
+      alt="The Sun Savage"
+      class="logo-image"
+    />
+    <p class="logo-title">Jungles</p>
+    <p class="of">of</p>
+    <p class="logo-title">Dorado</p>
+  </a>
+
+  <div class="mobile-navlist">
+    <form action="{% url 'search' %}" method="GET" class="search-form">
+      <input
+        {% if search_query %}
+        value="{{search_query}}"
+        {% endif %}
+        name="query"
+        type="search"
+        aria-label="Search"
+        placeholder="Search..."
+      />
+    </form>
+
+    <button class="search-button" onclick="searchToggle()">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+
+    <button class="navlist-toggle" onclick="menuToggle()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
-  <input id="toggler" type="checkbox">
+
+ 
+
+  <!-- <div class="wide-navlist"></div> -->
+
+  <!-- <input id="toggler" type="checkbox">
   <label for="toggler"><i class="fa-solid fa-bars"></i></label>
   <div class="menu-container">
-    <div class="navlist">
-      <div><a href="/"><span class="{% if request.path == '/' %}selected{% endif %}">Home</span></a></div>
-      <div><a href="/blog/"><span class="{% if request.path == '/blog/' %}selected{% endif %}">Posts</span></a></div>
-      <div><a href="/projects/"><span class="{% if request.path == '/projects/' %}selected{% endif %}">Projects</span></a></div>
-      <div><a href="/about/"><span class="{% if request.path == '/about/' %}selected{% endif %}">About</span></a></div>
+    <div class="navlist__fullscreen">
     </div>
     <div class="form">
       <form action="{% url 'search' %}" method="GET">
@@ -34,5 +61,27 @@
         <i class="fa-solid fa-magnifying-glass"></i>
       </div> 
     </div>
-  </div>
-  </nav>
+  </div> -->
+</nav>
+<div class="mobile-navbar">
+  <a href="/"
+    ><span class="{% if request.path == '/' %}selected{% endif %}"
+      >Home</span
+    ></a
+  >
+  <a href="/blog/"
+    ><span class="{% if request.path == '/blog/' %}selected{% endif %}"
+      >Posts</span
+    ></a
+  >
+  <a href="/projects/"
+    ><span class="{% if request.path == '/projects/' %}selected{% endif %}"
+      >Projects</span
+    ></a
+  >
+  <a href="/about/"
+    ><span class="{% if request.path == '/about/' %}selected{% endif %}"
+      >About</span
+    ></a
+  >
+</div>

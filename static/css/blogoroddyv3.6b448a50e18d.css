@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #eae7d3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* background */
+
+.home-background,
+.about-background,
+.index-background,
+.search-background,
+.project_page-background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  zoom: -20;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  background-position: center;
+}
+
+/* navbar*/
+
+.custom-navbar {
+  font-family: "Merriweather", serif;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: transparent;
+  justify-content: space-between;
+  padding: 30px 15px;
+}
+
+.logo-container {
+  padding-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo-image {
+  width: 40px;
+  height: auto;
+  margin-right: 3px;
+}
+
+.logo-title {
+  /* display: none; */
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Merriweather", serif;
+}
+
+.of {
+  font-size: 20px;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+@media (max-width: 768px) {
+  .logo-title,
+  .of {
+    display: none;
+  }
+}
+
+.mobile-navlist {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+#search-form {
+  transform: scaleX(0);
+  transition: 0.3s transform ease-in-out;
+  transform-origin: right;
+}
+
+.open {
+  transform: scaleX(1);
+}
+
+#search-form input {
+  padding-bottom: 5px;
+  border-bottom: black;
+}
+
+.search-button {
+  padding-top: 2px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.navlist-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.navlist-toggle span {
+  width: 20px;
+  background: black;
+  height: 3px;
+}
+
+/*  */
+/* footer */
+/*  */
+
+#footer {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.37);
+  display: flex;
+  justify-content: space-between;
+  font-family: "Merriweather", serif;
+  font-size: 0.8rem;
+  padding: 10px 5px;
+  color: white;
+  gap: 20px;
+}
+
+.social {
+  display: flex;
+  gap: 20px;
+}
+
+.social a {
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  #footer {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 5px;
+    position: static;
+    bottom: 0;
+  }
+  .social span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 1.1rem;
+  }
+}
