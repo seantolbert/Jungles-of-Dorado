@@ -4,24 +4,21 @@
 {% endblock %} {% block content %}
 <main class="home-page">
   <div class="cards">
-    {% for galItem in page.galList %} 
-    {% image galItem.specific.gallery_photo min-580x370 as photo %} 
-    {% if galItem.specific.link %}
-
-    <div class="card">
-      <div class="galImg-container"><img src="" alt="" /></div>
-    </div>
-
-    {% else %}
+    {% for galItem in page.galList %} {% image galItem.specific.gallery_photo min-580x370 as photo %} {% if galItem.specific.link %}
 
     <a href="{{galItem.specific.link}}">
       <div class="card">
-        <div><img src="" alt="" /></div>
+        <img src="{{photo.url}}" alt="" />
       </div>
     </a>
+    
+    {% else %}
+    
+    <div class="card">
+      <img src="{{photo.url}}" alt="" />
+    </div>
 
-    {% endif %}
-    {% endfor %}
+    {% endif %} {% endfor %}
   </div>
 </main>
 
