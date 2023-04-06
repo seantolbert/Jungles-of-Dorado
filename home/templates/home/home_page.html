@@ -3,27 +3,40 @@
 <link rel="stylesheet" href="{% static 'css/home/home_page.css' %}" />
 {% endblock %} {% block content %}
 <main class="home-page">
-  <div class="modal-img">
-    <img src="" alt="">
+  <!--  -->
+  <!-- modal -->
+  <!--  -->
+
+  <div class="modal">
+    <div class="modal-img">
+      <button class="close-modal" onclick="closeModal()">
+        <i class="fa-solid fa-x"></i>
+      </button>
+      <img src="" alt="" onclick="instaNavigation()" />
+    </div>
   </div>
+
+  <!--  -->
+  <!-- card list -->
+  <!--  -->
+
   <div class="cards">
     {% for galItem in page.galList %} 
-    {% image galItem.specific.gallery_photo min-580x370 as photo %} 
-    {% if galItem.specific.link %}
+    {% image galItem.specific.gallery_photo min-580x370 as photo %}
 
-    <a target="_blank" rel="noopener noreferrer" href="{{galItem.specific.link}}">
-      <div class="card">
-        <img src="{{photo.url}}" alt="gallery image" />
-      </div>
-    </a>
-    
-    {% else %}
+    <!--  -->
+    <!-- individual card -->
+    <!--  -->
 
     <div class="card">
-      <img src="{{photo.url}}" alt="gallery image" onclick="highlight()"/>
+      <img
+        src="{{photo.url}}"
+        alt="{% if galItem.link %}{{galItem.link}} {% else %}#{% endif %}"
+        onclick="highlight()"
+      />
     </div>
 
-    {% endif %} {% endfor %}
+    {% endfor %}
   </div>
 </main>
 

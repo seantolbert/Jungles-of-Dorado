@@ -23,7 +23,7 @@
 
 .blog__header {
   padding: 0;
-  color: #ffe074;
+  color: #3b3b3b;
   font-family: "Merriweather", serif;
   font-size: 3rem;
 }
@@ -35,9 +35,6 @@
   display: flex;
   flex-direction: column;
   background: rgb(246, 243, 223);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
-    0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
-    0 20px 1px -9px rgba(0, 0, 0, 0.15);
   padding: 2% 3%;
   overflow: hidden;
 }
@@ -102,7 +99,7 @@
 }
 
 .block-content {
-  color: #000000;
+  color: #3b3b3b;
   width: 100%;
   font-size: 1.3rem;
   font-family: monospace;
