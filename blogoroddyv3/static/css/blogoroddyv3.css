@@ -94,7 +94,11 @@ a {
   }
 }
 
-.mobile-navlist {
+/*  */
+/* mobile nav */
+/*  */
+
+.mobile-nav-options {
   display: flex;
   gap: 20px;
   align-items: center;
@@ -116,7 +120,7 @@ a {
   border-bottom: 3px solid black;
   outline: none;
   background: transparent;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .search-button {
@@ -140,6 +144,27 @@ a {
   cursor: pointer;
 }
 
+.desktop-nav-list {
+  display: flex;
+  gap: 20px;
+}
+
+.desk-selected {
+  border-bottom: 2px solid black;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav-list {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .navlist-toggle {
+    display: none;
+  }
+}
+
 .navlist-toggle span {
   width: 20px;
   background: black;
@@ -147,13 +172,75 @@ a {
 }
 
 /*  */
-/* mobile bottom navbar */
+/* mobile sidebar */
 /*  */
 
-.movible-navbar {
-  position: absolute;
-  bottom: 0;
+.mobile-navbar {
+  position: fixed;
+  height: 100vh;
+  width: 30vw;
+  background-color: #eae7d3;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  transform: translateX(30vw);
+  transition: 0.2s all ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0 0 20px 20px;
 }
+
+.removal {
+  display: none;
+}
+
+.menu-opened {
+  box-shadow: -15px 15px 15px rgba(0, 0, 0, 0.2);
+  transform: unset;
+}
+
+.menu-items {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.menu-items a {
+  font-family: "Merriweather", serif;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.selected {
+  background-color: #cdcab8;
+}
+
+.close-menu-container {
+  width: 30vw;
+  height: 30vw;
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-menu-btn {
+  width: 50%;
+  height: 50%;
+  border: 3px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/*  */
+/* desktop nav */
+/*  */
 
 /*  */
 /* footer */

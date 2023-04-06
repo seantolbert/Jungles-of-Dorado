@@ -1,5 +1,6 @@
 const searchForm = document.querySelector(".search-form");
-const mobileNav = document.quesrySelector('.mobile-nav')
+const mobileNav = document.querySelector(".mobile-navbar");
+const mobileNavOptions = document.querySelector(".mobile-nav-options");
 
 function searchToggle() {
   searchForm.classList.toggle("open");
@@ -10,6 +11,10 @@ function searchToggle() {
   }
 }
 
-function menuToggle() {
-  
+function menuOpen() {
+  mobileNav.classList.add("menu-opened");
+}
+
+function menuClose() {
+  mobileNav.classList.remove("menu-opened");
 }

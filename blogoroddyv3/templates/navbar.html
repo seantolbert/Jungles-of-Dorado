@@ -12,12 +12,17 @@
     <p class="logo-title">Dorado</p>
   </a>
 
-  <div class="mobile-navlist">
+  <div class="mobile-nav-options">
     <form action="{% url 'search' %}" method="GET" class="search-form">
       <input
-        {% if search_query %}
+        {%
+        if
+        search_query
+        %}
         value="{{search_query}}"
-        {% endif %}
+        {%
+        endif
+        %}
         name="query"
         type="search"
         aria-label="Search"
@@ -29,59 +34,67 @@
       <i class="fa-solid fa-magnifying-glass"></i>
     </button>
 
-    <button class="navlist-toggle" onclick="menuToggle()">
+    <!--  -->
+    <!-- mobile nav toggle button -->
+    <!--  -->
+
+    <button class="navlist-toggle" onclick="menuOpen()">
       <span></span>
       <span></span>
       <span></span>
     </button>
+
+    <!--  -->
+    <!-- desktop nav options -->
+    <!--  -->
+
+    <div class="desktop-nav-list">
+      <a href="/" class="{% if request.path == '/' %}desk-selected{% endif %}"
+        ><span>Home</span></a
+      >
+      <a
+        href="/blog/"
+        class="{% if request.path == '/blog/' %}desk-selected{% endif %}"
+        ><span>Posts</span></a
+      >
+      <a
+        href="/projects/"
+        class="{% if request.path == '/projects/' %}desk-selected{% endif %}"
+        ><span>Projects</span></a
+      >
+      <a
+        href="/about/"
+        class="{% if request.path == '/about/' %}desk-selected{% endif %}"
+        ><span>About</span></a
+      >
+    </div>
   </div>
-
- 
-
-  <!-- <div class="wide-navlist"></div> -->
-
-  <!-- <input id="toggler" type="checkbox">
-  <label for="toggler"><i class="fa-solid fa-bars"></i></label>
-  <div class="menu-container">
-    <div class="navlist__fullscreen">
-    </div>
-    <div class="form">
-      <form action="{% url 'search' %}" method="GET">
-        <input type="text" 
-        name="query" 
-        {% if search_query %} 
-        value="{{search_query}}" 
-        {% endif %} 
-        type="text" 
-        aria-label="Search"
-        class="nav__search-input"
-        >
-      </form>
-      <div class="search-icon">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </div> 
-    </div>
-  </div> -->
 </nav>
+
 <div class="mobile-navbar">
-  <a href="/"
-    ><span class="{% if request.path == '/' %}selected{% endif %}"
-      >Home</span
-    ></a
-  >
-  <a href="/blog/"
-    ><span class="{% if request.path == '/blog/' %}selected{% endif %}"
-      >Posts</span
-    ></a
-  >
-  <a href="/projects/"
-    ><span class="{% if request.path == '/projects/' %}selected{% endif %}"
-      >Projects</span
-    ></a
-  >
-  <a href="/about/"
-    ><span class="{% if request.path == '/about/' %}selected{% endif %}"
-      >About</span
-    ></a
-  >
+  <div class="menu-items">
+    <a href="/" class="{% if request.path == '/' %}selected{% endif %}"
+      ><span>Home</span></a
+    >
+    <a
+      href="/blog/"
+      class="{% if request.path == '/blog/' %}selected{% endif %}"
+      ><span>Posts</span></a
+    >
+    <a
+      href="/projects/"
+      class="{% if request.path == '/projects/' %}selected{% endif %}"
+      ><span>Projects</span></a
+    >
+    <a
+      href="/about/"
+      class="{% if request.path == '/about/' %}selected{% endif %}"
+      ><span>About</span></a
+    >
+  </div>
+  <div class="close-menu-container">
+    <button class="close-menu-btn" onclick="menuClose()">
+      <i class="fa-solid fa-x"></i>
+    </button>
+  </div>
 </div>
