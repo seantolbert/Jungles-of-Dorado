@@ -15,14 +15,9 @@
   <div class="mobile-nav-options">
     <form action="{% url 'search' %}" method="GET" class="search-form">
       <input
-        {%
-        if
-        search_query
-        %}
+        {% if search_query %}
         value="{{search_query}}"
-        {%
-        endif
-        %}
+        {% endif %}
         name="query"
         type="search"
         aria-label="Search"

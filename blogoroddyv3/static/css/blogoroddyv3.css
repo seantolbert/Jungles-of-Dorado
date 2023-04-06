@@ -149,6 +149,10 @@ a {
   gap: 20px;
 }
 
+/* .desktop-nav-list a {
+  font-weight: bold;
+} */
+
 .desk-selected {
   border-bottom: 2px solid black;
 }

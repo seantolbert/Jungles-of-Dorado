@@ -22,7 +22,8 @@ class GalleryPage(Page):
     content_panels = Page.content_panels + [
         FieldPanel('date'),
         ImageChooserPanel('gallery_photo'),
-        FieldPanel('description')
+        FieldPanel('description'),
+        FieldPanel('link')
     ]
 
 class GalleryIndexPage(Page):

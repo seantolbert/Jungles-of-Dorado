@@ -27,6 +27,7 @@ class HomePage(Page):
 
     def galList(self):
         galList = GalleryPage.objects.live()
+        # galList = map(lambda g: g.index(), galList)
         galList = galList.order_by('-date')
         # galList = galList.order_by('-date')[:6]
         return galList

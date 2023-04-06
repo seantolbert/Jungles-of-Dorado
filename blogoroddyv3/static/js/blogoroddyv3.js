@@ -1,3 +1,7 @@
+//
+// navbar
+//
+
 const searchForm = document.querySelector(".search-form");
 const mobileNav = document.querySelector(".mobile-navbar");
 const mobileNavOptions = document.querySelector(".mobile-nav-options");
@@ -17,4 +21,19 @@ function menuOpen() {
 
 function menuClose() {
   mobileNav.classList.remove("menu-opened");
+}
+
+//
+// gallery post
+//
+
+const modalImg = document.querySelector(".modal-img img");
+
+let selectedImg = "";
+
+function highlight() {
+  window.onclick = (e) => {
+    selectedImg = `${e.target.getAttribute("src")}`;
+    modalImg.setAttribute("src", selectedImg);
+  };
 }

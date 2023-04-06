@@ -3,19 +3,24 @@
 <link rel="stylesheet" href="{% static 'css/home/home_page.css' %}" />
 {% endblock %} {% block content %}
 <main class="home-page">
+  <div class="modal-img">
+    <img src="" alt="">
+  </div>
   <div class="cards">
-    {% for galItem in page.galList %} {% image galItem.specific.gallery_photo min-580x370 as photo %} {% if galItem.specific.link %}
+    {% for galItem in page.galList %} 
+    {% image galItem.specific.gallery_photo min-580x370 as photo %} 
+    {% if galItem.specific.link %}
 
-    <a href="{{galItem.specific.link}}">
+    <a target="_blank" rel="noopener noreferrer" href="{{galItem.specific.link}}">
       <div class="card">
-        <img src="{{photo.url}}" alt="" />
+        <img src="{{photo.url}}" alt="gallery image" />
       </div>
     </a>
     
     {% else %}
-    
+
     <div class="card">
-      <img src="{{photo.url}}" alt="" />
+      <img src="{{photo.url}}" alt="gallery image" onclick="highlight()"/>
     </div>
 
     {% endif %} {% endfor %}
