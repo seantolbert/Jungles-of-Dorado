@@ -6,14 +6,6 @@ main {
   flex-direction: column;
 }
 
-.tolbert {
-  /* position: absolute; */
-  /* bottom: 0; */
-  text-align: center;
-  color: #ffe074;
-  font-weight: bold;
-}
-
 .about-background {
   background-image: url(../../images/about.jpeg);
   filter: brightness(60%);
@@ -35,7 +27,7 @@ main {
 
 .about-description {
   font-size: 2rem;
-  color: white;
+  color: rgb(49, 49, 49);
   text-align: center;
 }
 

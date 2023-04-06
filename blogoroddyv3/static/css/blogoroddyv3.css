@@ -12,7 +12,7 @@ html {
 
 body {
   min-height: 100vh;
-  background-color: #F5F3DF;
+  background-color: #f5f3df;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -89,6 +89,14 @@ a {
   font-size: 25px;
   font-weight: bold;
   font-family: "Merriweather", serif;
+}
+
+.text-yellow {
+  color: #ffe074;
+}
+
+.text-white {
+  color: #fff;
 }
 
 .of {
