@@ -32,7 +32,7 @@
       {% image galItem.specific.gallery_photo min-580x370 as photo %}
       <img
         src="{{photo.url}}"
-        alt="{% if galItem.link %}{{galItem.link}} {% else %}{% endif %}"
+        alt="{% if galItem.link %}{{galItem.link}}{% else %}#{% endif %}"
         onclick="highlight()"
       />
     </div>
