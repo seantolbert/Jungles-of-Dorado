@@ -279,13 +279,17 @@ a {
 /*  */
 
 #footer {
-  width: 100%;
+  background: rgba(0, 0, 0, 0.37);
+  color: #ffe074;
   display: flex;
   justify-content: space-between;
+  padding: 50px 15px;
   font-family: "Merriweather", serif;
   font-size: 0.8rem;
-  padding: 10px;
-  gap: 20px;
+  width: 100%;
+  /* position: absolute;
+  bottom: 0; */
+
 }
 
 .social {

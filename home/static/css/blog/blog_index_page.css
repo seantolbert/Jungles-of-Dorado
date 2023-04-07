@@ -8,11 +8,12 @@
 } */
 
 .chip-list {
+  padding: 0 50px;
+  margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 10px;
   min-height: 100vh;
-  width: 100vw;
   align-items: center;
   justify-content: center;
   justify-items: stretch;
@@ -43,6 +44,20 @@
   overflow: clip;
   display: flex;
   align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .chip-list {
+    min-height: unset;
+    display: flex;
+    flex-direction: column;
+  }
+  .chip-post {
+    height: fit-content;
+  }
+  .background {
+    height: auto;
+  }
 }
 
 .background img {

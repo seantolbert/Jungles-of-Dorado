@@ -102,8 +102,9 @@
   color: #3b3b3b;
   width: 100%;
   font-size: 1.3rem;
-  font-family: monospace;
+font-family: 'Libre Franklin', sans-serif;
   line-height: 2rem;
+  font-weight: 300;
 }
 
 .block-content p {

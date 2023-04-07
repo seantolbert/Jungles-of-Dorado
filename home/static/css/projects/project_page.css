@@ -33,6 +33,7 @@
 @media screen and (max-width: 600px) {
   .project_page-background {
     filter: brightness(30%);
+
   }
 
   .project {
