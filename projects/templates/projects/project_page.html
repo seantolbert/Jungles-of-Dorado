@@ -8,13 +8,18 @@
 {% block content %}
 {% image page.background_img original as photo %}
 <div class="project_page-background" style="background-image: url({{photo.url}});"></div>
+
 <div class="project-container">
+
   <h3>Upcoming Projects</h3>
+
   {% for block in page.project %}
+
   <div class="project">
-    <span class="project__title">{{ block.value.label }}</span>
+    <!-- <span class="project__title">{{ block.value.label }}</span> -->
     <p class="project__description">{{ block.value.description }}</p>
   </div>
+
   {% endfor %}
 </div>
 {% endblock content %}

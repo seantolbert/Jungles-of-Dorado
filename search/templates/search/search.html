@@ -9,75 +9,73 @@
 {% block title %}Search{% endblock %} 
 
 {% block content %}
-<main>
-  <div class="search-background"></div>
-  <div class="search__container">
-    <form action="{% url 'search' %}" method="get" class="search__form">
-      <input
-        type="text"
-        class="search__input"
-        name="query"
-        {% if search_query %}
-        value="{{ search_query }}"
-        {% endif %}
-      />
-      <input type="submit" value="Go" class="search__button" />
-    </form>
-    {% if search_results %}
-    <ul class="search__results">
-      {% for result in search_results %}
-      <li>
-        <div class="search__result">
-          <a class="search__result-link" href="{% pageurl result %}">
-            {% image result.specific.main_image fill-50x50 as photo %}
-            <img
-            class="result-image"
-            src="{{ photo.url }}"
-            alt="{{ photo.title }}"
-            width="{{ photo.width }}"
-            height="{{photo.height}}"
-            />
-            <div class="result-title">
-              {{ result }} 
+<main id="search">
+  <h1 class="search-title">Search</h1>
+  <form action="{% url 'search' %}" method="get" class="search__form">
+    <input
+      type="text"
+      class="search__input"
+      name="query"
+      {% if search_query %}
+      value="{{ search_query }}"
+      {% endif %}
+    />
+    <button type="submit" class="search__button">Go</button>
+  </form>
+  {% if search_results %}
+  <ul class="search__results">
+    {% for result in search_results %}
+    <li>
+      <div class="search__result">
+        <a class="search__result-link" href="{% pageurl result %}">
+          {% image result.specific.main_image fill-50x50 as photo %}
+          <img
+          class="result-image"
+          src="{{ photo.url }}"
+          alt="{{ photo.title }}"
+          width="{{ photo.width }}"
+          height="{{photo.height}}"
+          />
+          <div class="result-title">
+            {{ result }} 
+          </div>
+          {% comment %} <div class="result-description">
+            {% if result.specific.description %}
+            {{result.specific.description}}
+            {% endif %}
+          </div> {% endcomment %}
+          {% if result.tags %}
+          <div class="tags">
+            {% for tag in result.tags %}
+            <div class="tag">
+              {{tag}}
             </div>
-            {% comment %} <div class="result-description">
-              {% if result.specific.description %}
-              {{result.specific.description}}
-              {% endif %}
-            </div> {% endcomment %}
-            {% if result.tags %}
-            <div class="tags">
-              {% for tag in result.tags %}
-              <div class="tag">
-                {{tag}}
-              </div>
-              {% endfor %}
-            </div>  
-            {% endif %}
-            {% if result.description %}
-              {{result.description}} 
-            {% endif %}
-          </a>
-        </div>
-        {% comment %} {% if result.search_description %} {{ result.search_description }} {% endif %} {% endcomment %}
-      </li>
-      {% endfor %}
-    </ul>
-    {% if search_results.has_previous %}
-    <a
-      href="{% url 'search' %}?query={{ search_query|urlencode }}&amp;page={{ search_results.previous_page_number }}"
-      >Previous</a
-    >
-    {% endif %} {% if search_results.has_next %}
-    <a
-      href="{% url 'search' %}?query={{ search_query|urlencode }}&amp;page={{ search_results.next_page_number }}"
-      >Next</a
-    >
-    {% endif %} {% elif search_query %}
-    <div class="search__results">
-      <p class="search__no-result">No results found :(</p>
-    </div>
-    {% endif %}
+            {% endfor %}
+          </div>  
+          {% endif %}
+          {% if result.description %}
+            {{result.description}} 
+          {% endif %}
+        </a>
+      </div>
+      {% comment %} {% if result.search_description %} {{ result.search_description }} {% endif %} {% endcomment %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% if search_results.has_previous %}
+  <a
+    href="{% url 'search' %}?query={{ search_query|urlencode }}&amp;page={{ search_results.previous_page_number }}"
+    >Previous</a
+  >
+  {% endif %} {% if search_results.has_next %}
+  <a
+    href="{% url 'search' %}?query={{ search_query|urlencode }}&amp;page={{ search_results.next_page_number }}"
+    >Next</a
+  >
+  {% endif %} {% elif search_query %}
+  <div class="search__results">
+    <p class="search__no-result">No results found :(</p>
   </div>
+  {% endif %}
 </main>
 {% endblock %}

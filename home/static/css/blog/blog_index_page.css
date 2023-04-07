@@ -11,7 +11,7 @@
   padding: 0 50px;
   margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 10px;
   min-height: 100vh;
   align-items: center;
@@ -19,16 +19,28 @@
   justify-items: stretch;
 }
 
+@media (min-width: 768px) {
+  .chip-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .chip-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .chip-post {
+  padding: 0 20px;
   position: relative;
-  height: 33.33vw;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
 .background {
-  height: 16.5vw;
+  height: 20rem;
   overflow: clip;
   display: flex;
   align-items: center;
@@ -62,6 +74,8 @@
 
 .chip-heading {
   font-size: 2rem;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
 }
 
 /* .chip-description {} */
@@ -79,6 +93,7 @@
   font-weight: bold;
   background: #ffe074;
   padding: 3px;
+  border-radius: 5px;
 }
 
 /* .tag:last-child {

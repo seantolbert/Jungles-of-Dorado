@@ -15,12 +15,15 @@ class GalleryPage(Page):
         on_delete=models.SET_NULL
     )
 
+    link = models.URLField(blank=True, null=True)
+
     description = models.CharField(max_length=500, blank=True, null=True)
 
     content_panels = Page.content_panels + [
         FieldPanel('date'),
         ImageChooserPanel('gallery_photo'),
-        FieldPanel('description')
+        FieldPanel('description'),
+        FieldPanel('link')
     ]
 
 class GalleryIndexPage(Page):

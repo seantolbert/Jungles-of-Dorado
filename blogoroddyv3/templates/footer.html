@@ -1,8 +1,9 @@
-<div id="footer">
+<div id="footer" class="{% if request.path == '/projects/' %}footer-text-white{% endif %}">
   <p class="copywrite">©2022 Jungles of Dorado</p>
   <div class="social">
     <a target="_blank" href="https://www.instagram.com/junglesofdorado/">
-      Instagram</a>
+      Instagram</a
+    >
     <a href="/about/">Contact</a>
   </div>
 </div>

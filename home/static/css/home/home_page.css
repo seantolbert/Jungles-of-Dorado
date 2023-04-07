@@ -1,200 +1,83 @@
-.home-background {
-  /* background-image: url(../../images/homepage2.jpg); */
-  filter: brightness(70%);
-}
-
-.header-container {
-  display: flex;
-  width: 80%;
-  margin: 5% 10%;
-  flex-direction: column;
-}
-
-.headline {
-  font-family: "Merriweather", serif;
-  color: white;
-  font-size: 2.5rem;
-}
-
-.subheadline {
-  font-weight: bold;
-  font-family: "Merriweather", serif;
-  font-size: 1.3rem;
-  color: #ffe074;
-}
-
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  width: 100%;
-  margin: 9% auto;
-  padding: 10px;
-  border: 0px;
+  columns: 2;
+  gap: 1rem;
+  padding: 0 1rem 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .cards {
+    columns: 3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cards {
+    columns: 4;
+  }
 }
 
 .card {
+  height: auto;
   width: 100%;
-  height: 370px;
-  overflow: hidden;
-  border: 0px;
-  border-radius: 10px;
-  /* filter: brightness(50%); */
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 1rem;
 }
 
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  height: inherit;
-  justify-content: space-between;
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card img {
   width: 100%;
-  border: 0px;
-  z-index: 120;
-}
-
-.card-heading {
-  font-weight: bold;
-  margin-top: 40px;
-  padding: 5px;
-  font-size: 2.1rem;
-  width: fit-content;
-  max-width: 85%;
-  border-radius: 0 10px 10px 0;
-  border: 0px;
-  background: rgba(64, 64, 64, 0.7);
-  color: #ffe074;
-  font-family: "Merriweather", serif;
-}
-
-.blog-description__container {
-  display: flex;
-  align-items: flex-start;
-  transition: all 0.5s;
-  opacity: 0;
   height: 100%;
 }
 
-.blog-description__container:hover {
-  opacity: 1;
+/*  */
+/* modal */
+/*  */
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  pointer-events: none;
+  display: none;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 0 10px 10px 10px;
+  margin-top: 4rem;
+  transform: translateY(-50px);
+  z-index: 10;
+  /* pointer-events: stroke; */
 }
 
-.blog-description {
-  background: rgba(64, 64, 64, 0.7);
-  border-radius: 10px;
-  margin: 20px 10px;
-  padding: 20px;
-  font-family: "Merriweather", serif;
-  color: white;
-}
-
-.row {
-  display: flex;
-  width: inherit;
-  border: 0px;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.card-date {
-  color: white;
-  justify-self: end;
-  padding: 5px;
-  border-radius: 5px 0 0 5px;
-  background: rgba(64, 64, 64, 0.7);
-  font-size: 1.1rem;
-  right: 0;
-  font-family: "Merriweather", serif;
-  float: right;
-}
-
-.card-button {
-  color: white;
-  border-radius: 5px;
-  padding: 5px;
-  background: rgba(64, 64, 64, 0.7);
-  font-size: 1.2rem;
-  transition: all 0.5s ease;
-  font-family: "Merriweather", serif;
-  color: #ffe074;
-  font-weight: bold;
-  position: absolute;
-  margin-left: 10px;
-}
-
-.card-button:active {
-  background: #ffe074;
-  color: black;
-}
-
-/* streamfields */
-
-.stream__container {
-  color: white;
-  width: 100%;
-  margin: 5% auto;
+.modal-img {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 100px;
 }
 
-.stream_headline {
-  font-size: 2.2rem;
-  font-family: "Merriweather", serif;
-  width: 80%;
+.modal-img a {
+  pointer-events: all;
 }
 
-.stream_headline a {
-  color: #ffe074;
+.close-modal {
+  z-index: 10;
+  display: none;
+  align-self: end;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
+  pointer-events: all;
 }
 
-.stream_card__container {
+.modal-img img {
   width: 100%;
-  margin: 10px;
-  height: 40vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.stream_content {
-  /* font-weight: bold; */
-  font-size: 1rem;
-  width: 50%;
-  text-align: center;
-  font-family: 'Merriweather', serif;
-}
-
-@media (hover: hover) {
-  .card-button:hover {
-    font-size: 1.3em;
-    background: #ffe074;
-    color: black;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .headline {
-    font-size: 3rem;
-  }
-
-  .stream_content {
-    font-weight: bold;
-    font-size: 1.7rem;  
-  }
+  pointer-events: all;
   
-  .cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .card {
-    width: 30%;
-  }
 }

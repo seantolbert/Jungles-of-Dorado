@@ -1,39 +1,99 @@
 {% load static wagtailimages_tags %}
 
 <nav class="custom-navbar">
-  <div class="logo-container">
-    <a class="logo-link" href="/">
-      <img src="{% static 'images/sun_savage2.png' %}" alt="The Sun Savage" class="logo-image">
-      <p class="logo-title">Jungles</p>
-      <p class="of">of</p>  
-      <p class="logo-title">Dorado</p>
-    </a>
-  </div>
-  <input id="toggler" type="checkbox">
-  <label for="toggler"><i class="fa-solid fa-bars"></i></label>
-  <div class="menu-container">
-    <div class="navlist">
-      <div><a href="/"><span class="{% if request.path == '/' %}selected{% endif %}">Home</span></a></div>
-      <div><a href="/blog/"><span class="{% if request.path == '/blog/' %}selected{% endif %}">Posts</span></a></div>
-      <div><a href="/gallery/"><span class="{% if request.path == '/gallery/' %}selected{% endif %}">Gallery</span></a></div>
-      <div><a href="/projects/"><span class="{% if request.path == '/projects/' %}selected{% endif %}">Projects</span></a></div>
-      <div><a href="/about/"><span class="{% if request.path == '/about/' %}selected{% endif %}">About</span></a></div>
-    </div>
-    <div class="form">
-      <form action="{% url 'search' %}" method="GET">
-        <input type="text" 
-        name="query" 
-        {% if search_query %} 
-        value="{{search_query}}" 
-        {% endif %} 
-        type="text" 
+  <a class="logo-container {% if request.path == '/projects/' %}text-yellow{% endif %}" href="/">
+    <img
+      src="{% static 'images/sun_savage2.png' %}"
+      alt="The Sun Savage"
+      class="logo-image"
+    />
+    <p class="logo-title">Jungles</p>
+    <p class="of">of</p>
+    <p class="logo-title">Dorado</p>
+  </a>
+
+  <div class="mobile-nav-options">
+    <form action="{% url 'search' %}" method="GET" class="search-form {%if request.path == '/projects/' %}border-white{% endif %}">
+      <input
+        {% if search_query %}
+        value="{{search_query}}"
+        {% endif %}
+        name="query"
+        type="search"
         aria-label="Search"
-        class="nav__search-input"
-        >
-      </form>
-      <div class="search-icon">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </div> 
+        placeholder="Search..."
+      />
+    </form>
+
+    <button class="search-button {%if request.path == '/projects/' %}icon-white{% endif %}" onclick="searchToggle()">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+
+    <!--  -->
+    <!-- mobile nav toggle button -->
+    <!--  -->
+
+    <button class="navlist-toggle {%if request.path == '/projects/' %}bg-white{% endif %}" onclick="menuOpen()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!--  -->
+    <!-- desktop nav options -->
+    <!--  -->
+
+    <div class="desktop-nav-list {%if request.path == '/projects/' %}text-white{% endif %}">
+      <a href="/" class="{% if request.path == '/' %}desk-selected{% endif %}"
+        ><span>Home</span></a
+      >
+      <a
+        href="/blog/"
+        class="{% if request.path == '/blog/' %}desk-selected{% endif %}"
+        ><span>Posts</span></a
+      >
+      <a
+        href="/projects/"
+        class="{% if request.path == '/projects/' %}desk-selected-light{% endif %}"
+        ><span>Projects</span></a
+      >
+      <a
+        href="/about/"
+        class="{% if request.path == '/about/' %}desk-selected{% endif %}"
+        ><span>About</span></a
+      >
     </div>
   </div>
-  </nav>
+</nav>
+
+<!--  -->
+<!-- mobile nav sidebar -->
+<!--  -->
+
+<div class="mobile-navbar">
+  <div class="menu-items">
+    <a href="/" class="{% if request.path == '/' %}selected{% endif %}"
+      ><span>Home</span></a
+    >
+    <a
+      href="/blog/"
+      class="{% if request.path == '/blog/' %}selected{% endif %}"
+      ><span>Posts</span></a
+    >
+    <a
+      href="/projects/"
+      class="{% if request.path == '/projects/' %}selected text-white{% endif %}"
+      ><span>Projects</span></a
+    >
+    <a
+      href="/about/"
+      class="{% if request.path == '/about/' %}selected{% endif %}"
+      ><span>About</span></a
+    >
+  </div>
+  <div class="close-menu-container">
+    <button class="close-menu-btn" onclick="menuClose()">
+      <i class="fa-solid fa-x"></i>
+    </button>
+  </div>
+</div>

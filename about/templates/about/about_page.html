@@ -1,20 +1,23 @@
-{% extends 'base.html' %}
-{% load static wagtailimages_tags %}
-
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/about/about_page.css' %}">
-{% endblock %}
-
-{% block content %}
-<main>
-    {% image page.background_img original as photo %}
-    <div class="about-background" style="background-image: url({{photo.url}});"></div>
-    <div class="about-container">
-        <div class="about-description">{{ page.description }}</div>
-        <div class="about-email">{{ page.email }}</div>
-        <div class="tolbert-container">
-            <a target="_blank" href="http://tolbert.me" class="tolbertco">Tolbert & Co</a>
-        </div>
+{% extends 'base.html' %} {% load static wagtailimages_tags %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about/about_page.css' %}" />
+{% endblock %} {% block content %}
+<main id="about">
+  <!-- <div
+        class="about-background"
+        style="background-image: url({{photo.url}});"
+        ></div> -->
+  <div class="about-img-container">
+    {% image page.about_img original as photo %}
+    <img src="{{photo.url}}" alt="Gallery Image" />
+  </div>
+  <div class="about-container">
+    <div class="about-description">{{ page.description }}</div>
+    <div class="about-email">{{ page.email }}</div>
+    <div class="tolbert-container">
+      <a target="_blank" href="http://tolbert.me" class="tolbertco"
+        >Tolbert & Co</a
+      >
     </div>
+  </div>
 </main>
 {% endblock %}
