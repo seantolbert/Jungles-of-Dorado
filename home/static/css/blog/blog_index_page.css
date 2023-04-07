@@ -42,9 +42,14 @@
 
 .background {
   height: 20rem;
+  width: 100%;
   overflow: clip;
   display: flex;
   align-items: center;
+}
+
+.background {
+  width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
