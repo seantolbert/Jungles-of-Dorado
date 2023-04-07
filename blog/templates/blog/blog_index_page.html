@@ -6,7 +6,7 @@
 <main class="blog-index-page">
 
   <div class="chip-list">
-    {% for post in blogs %} {% image post.specific.main_image min-600x400 as photo %}
+    {% for post in blogs %} {% image post.specific.main_image max-600x400 as photo %}
     <div class="chip-post">
       <a href="{% pageurl post.specific %}">
         <div class="background">

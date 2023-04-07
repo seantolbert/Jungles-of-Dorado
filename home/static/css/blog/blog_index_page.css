@@ -32,24 +32,23 @@
 }
 
 .chip-post {
-  padding: 0 20px;
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  justify-content: start;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .background {
   height: 20rem;
-  width: 100%;
   overflow: clip;
   display: flex;
   align-items: center;
 }
 
-.background {
-  width: 100%;
+.background img {
+  object-fit: cover;
+  height: 100%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -57,9 +56,6 @@
     min-height: unset;
     display: flex;
     flex-direction: column;
-  }
-  .chip-post {
-    height: fit-content;
   }
   .background {
     height: auto;
