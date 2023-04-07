@@ -3,8 +3,7 @@
   filter: brightness(80%);
 }
 
-.search__container {
-  margin: 10%;
+#search {
   position: relative;
   display: flex;
   flex-direction: column;

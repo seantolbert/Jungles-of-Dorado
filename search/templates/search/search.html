@@ -9,9 +9,7 @@
 {% block title %}Search{% endblock %} 
 
 {% block content %}
-<main>
-  <div class="search-background"></div>
-  <div class="search__container">
+<main id="search">
     <form action="{% url 'search' %}" method="get" class="search__form">
       <input
         type="text"
@@ -78,6 +76,5 @@
       <p class="search__no-result">No results found :(</p>
     </div>
     {% endif %}
-  </div>
 </main>
 {% endblock %}

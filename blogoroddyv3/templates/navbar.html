@@ -1,7 +1,7 @@
 {% load static wagtailimages_tags %}
 
-<nav class="custom-navbar" style="color: white;">
-  <a class="logo-container" href="/">
+<nav class="custom-navbar">
+  <a class="logo-container {% if request.path == '/projects/' %}text-yellow{% endif %}" href="/">
     <img
       src="{% static 'images/sun_savage2.png' %}"
       alt="The Sun Savage"
@@ -13,7 +13,7 @@
   </a>
 
   <div class="mobile-nav-options">
-    <form action="{% url 'search' %}" method="GET" class="search-form">
+    <form action="{% url 'search' %}" method="GET" class="search-form {%if request.path == '/projects/' %}border-white{% endif %}">
       <input
         {% if search_query %}
         value="{{search_query}}"
@@ -25,7 +25,7 @@
       />
     </form>
 
-    <button class="search-button" onclick="searchToggle()">
+    <button class="search-button {%if request.path == '/projects/' %}icon-white{% endif %}" onclick="searchToggle()">
       <i class="fa-solid fa-magnifying-glass"></i>
     </button>
 
@@ -33,7 +33,7 @@
     <!-- mobile nav toggle button -->
     <!--  -->
 
-    <button class="navlist-toggle" onclick="menuOpen()">
+    <button class="navlist-toggle {%if request.path == '/projects/' %}bg-white{% endif %}" onclick="menuOpen()">
       <span></span>
       <span></span>
       <span></span>
@@ -43,7 +43,7 @@
     <!-- desktop nav options -->
     <!--  -->
 
-    <div class="desktop-nav-list">
+    <div class="desktop-nav-list {%if request.path == '/projects/' %}text-white{% endif %}">
       <a href="/" class="{% if request.path == '/' %}desk-selected{% endif %}"
         ><span>Home</span></a
       >
@@ -54,7 +54,7 @@
       >
       <a
         href="/projects/"
-        class="{% if request.path == '/projects/' %}desk-selected{% endif %}"
+        class="{% if request.path == '/projects/' %}desk-selected-light{% endif %}"
         ><span>Projects</span></a
       >
       <a
@@ -82,7 +82,7 @@
     >
     <a
       href="/projects/"
-      class="{% if request.path == '/projects/' %}selected{% endif %}"
+      class="{% if request.path == '/projects/' %}selected text-white{% endif %}"
       ><span>Projects</span></a
     >
     <a

@@ -1,10 +1,57 @@
-/* Tolbert Logo */
-main {
-  height: 80vh;
+#about {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  width: 100%;
+  padding: 0 10px;
   align-items: center;
+  justify-content: center;
+}
+
+.about-img-container {
+  width: 50%;
+}
+
+.about-img-container img {
+  width: 100%;
+}
+
+.about-container {
+  padding: 0 130px;
+  font-family: "Merriweather", serif;
+  width: 50%;
+  /* text-align: justify; */
+}
+
+.about-description {
+  
+  font-size: 1.7rem;
+  text-align: left;
+}
+
+.about-email {
+  font-size: 1rem;
+  text-align: center;
+  margin: 2%;
+  color: #3e3e3e;
+}
+
+@media screen and (max-width: 650px) {
+  .about-container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .about-img-container {
+    display: none;
+  }
+
+  .about-description {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .about-email {
+    font-size: 0.9rem;
+  }
 }
 
 .tolbert-container {
@@ -14,46 +61,6 @@ main {
 }
 
 .tolbertco {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 0.7rem;
-}
-
-.about-background {
-  /* background-image: url(../../images/BCOSCONC0.jpg); */
-  filter: brightness(60%);
-}
-
-.about-container {
-  margin: 10% auto;
-  font-family: "Merriweather", serif;
-  width: 50%;
-}
-
-.about-description {
-  font-size: 2rem;
-  /* color: white; */
-  text-align: center;
-}
-
-.about-email {
-  font-size: 1rem;
-  text-align: center;
-  margin: 2%;
-  color: #ffe074;
-}
-
-@media screen and (max-width: 650px) {
-  .about-container {
-    width: 80%;
-  }
-
-  .about-description {
-    font-size: 1.4rem;
-    color: white;
-    text-align: center;
-  }
-
-  .about-email {
-    font-size: 0.9rem;
-  }
 }

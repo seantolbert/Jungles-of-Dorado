@@ -38,6 +38,7 @@ a {
   position: fixed;
   pointer-events: none;
   z-index: 10;
+  transition: 0.2s all ease-in-out;
 }
 
 .home-background,
@@ -95,10 +96,6 @@ a {
   color: #ffe074;
 }
 
-.text-white {
-  color: #fff;
-}
-
 .of {
   font-size: 20px;
   font-style: italic;
@@ -141,12 +138,21 @@ a {
   font-size: 15px;
 }
 
+.border-white input {
+  border-bottom: 3px solid white;
+  color: white;
+}
+
 .search-button {
   padding-top: 2px;
   font-size: 20px;
   border: none;
   cursor: pointer;
   background-color: transparent;
+}
+
+.icon-white {
+  color: white;
 }
 
 /*  */
@@ -167,12 +173,17 @@ a {
   gap: 20px;
 }
 
-/* .desktop-nav-list a {
-  font-weight: bold;
-} */
+.text-white span {
+  color: white;
+}
 
 .desk-selected {
   border-bottom: 2px solid black;
+}
+
+.desk-selected-light {
+  
+  border-bottom: 2px solid white;
 }
 
 @media (max-width: 768px) {
@@ -191,6 +202,10 @@ a {
   width: 20px;
   background: black;
   height: 3px;
+}
+
+.bg-white span {
+  background: white;
 }
 
 /*  */
@@ -261,10 +276,6 @@ a {
 }
 
 /*  */
-/* desktop nav */
-/*  */
-
-/*  */
 /* footer */
 /*  */
 
@@ -281,6 +292,11 @@ a {
 .social {
   display: flex;
   gap: 20px;
+}
+
+.footer-text-white  *{
+  color: white;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 500px) {
