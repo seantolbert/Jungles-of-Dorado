@@ -13,10 +13,6 @@ from blog.models import BlogPage
 
 from gallery.models import GalleryPage
 
-# from gallery.models import GalleryPage
-
-# header = blocks.CharBlock()
-
 
 class CardBlock(blocks.StructBlock):
     image = ImageChooserBlock(required=False)
