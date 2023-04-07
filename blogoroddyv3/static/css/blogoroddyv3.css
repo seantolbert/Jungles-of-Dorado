@@ -279,17 +279,12 @@ a {
 /*  */
 
 #footer {
-  background: rgba(0, 0, 0, 0.37);
-  color: #ffe074;
   display: flex;
   justify-content: space-between;
-  padding: 50px 15px;
   font-family: "Merriweather", serif;
   font-size: 0.8rem;
+  padding: 10px;
   width: 100%;
-  /* position: absolute;
-  bottom: 0; */
-
 }
 
 .social {
@@ -317,5 +312,6 @@ a {
     padding: 5px;
     position: static;
     bottom: 0;
+    gap: 20px;
   }
 }
