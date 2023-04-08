@@ -194,7 +194,11 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:3001",
+    "http://localhost:2020",
     "http://tolbert.me",
     "http://localhost:5173",
 ]
 
+WAGTAILAPI_SERIALIZERS = {
+    'blog.serializers.BlogSerializer'
+}
